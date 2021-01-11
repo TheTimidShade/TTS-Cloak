@@ -1,0 +1,7 @@
+/* #Wazogo
+$[
+	1.063,
+	["CLOAK_UI",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,1,0],
+	[1000,"CLOAK_DISP_TEXT",[1,"CLOAK:",["0.025625 * safezoneW + safezoneX","0.929 * safezoneH + safezoneY","0.0928125 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[0,0,0,0.5],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/
