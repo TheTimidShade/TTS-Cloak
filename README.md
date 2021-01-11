@@ -28,28 +28,28 @@ This function initialises the cloak settings for all units and the server. These
 4: _playVoice - If false, 'cloak engaged' voice will not be played on cloak start.  
 5: _useUI - If false, the option to toggle the cloak display will not be visible (don't need it if you have)
 
-**Execution**
+**Execution**  
 Should be executed from `init.sqf` to ensure consistent settings on all clients and server.
 
 ### tts_cloak_fnc_giveCloak
 This function adds actions to the given player unit so they can active/deactivate their cloak. Does not work for AI units.
 
 **Parameters**  
-0: _unit - Player unit to give cloak abilities to.
-1: _duration - Maximum duration in seconds the unit can cloak for before they will be forced to decloak.
-2: _cooldown - Number of seconds before unit can cloak again after decloaking.
+0: _unit - Player unit to give cloak abilities to.  
+1: _duration - Maximum duration in seconds the unit can cloak for before they will be forced to decloak.  
+2: _cooldown - Number of seconds before unit can cloak again after decloaking.  
 
-**Execution**
+**Execution**  
 Should be executed from server or client having actions added.
 
 ### tts_cloak_fnc_cloakAI
 This function will cloak the given AI unit for the provided number of seconds. Also works for player units, but the player has no control over the cloak status. Note that cloaked AI units will still target enemy units and are invulnerable while the cloak is active so use carefully. 
 
 **Parameters**  
-0: _unit - Unit to cloak.
-1: _duration - Duration of cloak state.
+0: _unit - Unit to cloak.  
+1: _duration - Duration of cloak state.  
 
-**Execution**
+**Execution**  
 Should be executed from the server or host player.
 
 ## Changelog
