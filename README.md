@@ -18,15 +18,15 @@ Designed for Arma 3, this script gives player and AI units the ability to turn (
 
 ## Useful functions and parameters
 ### tts_cloak_fnc_initCloak
-This function initialises the cloak settings for all units and the server. These settings can be changed on the fly if necessary but have to be updated on all clients and the server for consistent results.
+This function initialises the cloak settings for all clients and the server. These settings can be changed on the fly if necessary but have to be updated on all clients and the server for consistent results.
 
 **Parameters**  
 0: _uniforms - List of uniform classnames considered 'cloaking' uniforms.  
-1: _requireHolstered - Unit must put away weapon to cloak and will decloak if a weapon is pulled out.  
+1: _requireHolstered - If true, unit must put away their weapon to cloak and will decloak if a weapon is pulled out.  
 2: _decloakOnFired - Whether or not the unit is decloaked when shooting or throwing grenades.  
 3: _playSounds - If false, no sounds will be played on cloak/decloak.  
 4: _playVoice - If false, 'cloak engaged' voice will not be played on cloak start.  
-5: _useUI - If false, the option to toggle the cloak display will not be visible (don't need it if you have)
+5: _useUI - If false, the option to toggle the cloak display will not be visible (don't need it if you have unlimited cloak)
 
 **Execution**  
 Should be executed from `init.sqf` to ensure consistent settings on all clients and server.
