@@ -55,5 +55,9 @@ Should be executed from the server or host player.
 ## Changelog
 Read below for complete changelog history.
 
+### 22/01/2021
+- Fixed sound sources not being created at correct position when units were not near terrain.
+- Adjusted cloak in/out transition to be created at centre of mass instead of feet.
+
 ### 11/01/2021
 - Initial upload to GitHub.
