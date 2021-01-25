@@ -6,11 +6,12 @@
 
 	Parameters:
 		0: ARRAY (OPTIONAL) - Array of uniforms which are considered 'cloaking' uniforms.
-		1: BOOL (OPTIONAL) - Whether or not the unit must put away their weapon to cloak.
-		2: BOOL (OPTIONAL) - Whether or not the unit will uncloak when firing their weapon or throwing grenades.
-		3: BOOL (OPTIONAL) - Whether or not to play sounds when entering/exiting cloak.
-		4: BOOL (OPTIONAL) - Whether or not to play 'cloak engaged' voice after activating cloak.
-		5: BOOL (OPTIONAL) - Whether or not to use the cloak UI to show cloak time/cooldown.
+		1: ARRAY (OPTIONAL) - Array of headgear which are considered 'cloaking' headgear.
+		2: BOOL (OPTIONAL) - Whether or not the unit must put away their weapon to cloak.
+		3: BOOL (OPTIONAL) - Whether or not the unit will uncloak when firing their weapon or throwing grenades.
+		4: BOOL (OPTIONAL) - Whether or not to play sounds when entering/exiting cloak.
+		5: BOOL (OPTIONAL) - Whether or not to play 'cloak engaged' voice after activating cloak.
+		6: BOOL (OPTIONAL) - Whether or not to use the cloak UI to show cloak time/cooldown.
 		
 	Returns:
 		NOTHING
@@ -21,6 +22,7 @@
 	Example:
 		[
 			["U_O_V_Soldier_Viper_hex_F"], 	// require viper uniform
+			["H_HelmetO_ViperSP_hex_F"], 	// require viper helmet
 			true, 							// weapon must be holstered
 			true,							// decloaked when firing/throwing grenades
 			true,							// play cloak sound effects
@@ -31,6 +33,7 @@
 
 params [
 	["_uniforms", [], [[]]],
+	["_headgear", [], [[]]],
 	["_requireHolstered", true, [true]],
 	["_decloakOnFired", true, [true]],
 	["_playSounds", true, [true]],
@@ -43,6 +46,13 @@ if (count _uniforms == 0) then {
 	tts_cloak_uniforms = [""];
 } else {
 	tts_cloak_uniforms = _uniforms; 
+};
+
+// cloak headgear
+if (count _headgear == 0) then {
+	tts_cloak_headgear = [""];
+} else {
+	tts_cloak_headgear = _headgear; 
 };
 
 // define settings

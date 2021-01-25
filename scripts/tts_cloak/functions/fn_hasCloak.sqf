@@ -2,14 +2,15 @@
 	Author: TheTimidShade
 
 	Description:
-		Checks if the given unit has uniform required to cloak.
+		Checks if the given unit has uniform & headgear required to cloak.
 		If the empty string "" is in 'tts_cloak_uniforms' array, no uniform will be required.
+		If the empty string "" is in 'tts_cloak_headgear' array, no headgear will be required.
 
 	Parameters:
-		0: OBJECT - Unit to check for cloak uniform.
+		0: OBJECT - Unit to check for cloak equipment.
 		
 	Returns:
-		BOOL - true if unit has correct uniform, false if unit does not have correct uniform.
+		BOOL - true if unit has correct equipment, false if unit does not have correct equipment.
 
 	Execution:
 		Can be executed anywhere the check is required.
@@ -22,7 +23,7 @@ params [
 	["_unit", objNull, [objNull]]
 ];
 
-if ("" in tts_cloak_uniforms) then {
+private _hasUniform = if ("" in tts_cloak_uniforms) then {
 	true
 } else {
 	if (uniform _unit in tts_cloak_uniforms) then {
@@ -31,3 +32,15 @@ if ("" in tts_cloak_uniforms) then {
 		false
 	};
 };
+
+private _hasHeadgear = if ("" in tts_cloak_headgear) then {
+	true
+} else {
+	if (headgear _unit in tts_cloak_headgear) then {
+		true
+	} else {
+		false
+	};
+};
+
+if (_hasUniform && _hasHeadgear) then {true} else {false};

@@ -55,6 +55,9 @@ Should be executed from the server or host player.
 ## Changelog
 Read below for complete changelog history.
 
+### 25/01/2021
+- Added possibility to use headgear as cloak requirement as well.
+
 ### 22/01/2021
 - Fixed sound sources not being created at correct position when units were not near terrain.
 - Adjusted cloak in/out transition to be created at centre of mass instead of feet.
