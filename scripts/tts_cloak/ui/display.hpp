@@ -16,7 +16,7 @@ class tts_cloak_ui
 		// GUI EDITOR OUTPUT START (by TheTimidShade, v1.063, #Wazogo)
 		////////////////////////////////////////////////////////
 
-		class CLOAK_DISP_TEXT: RscStructuredText
+		class CLOAK_DISP_TEXT: RscCloakStructuredText
 		{
 			idc = IDC_CLOAK_UI_CLOAK_DISP_TEXT;
 			text = "CLOAK:"; //--- ToDo: Localize;
