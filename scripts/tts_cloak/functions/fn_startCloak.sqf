@@ -31,8 +31,7 @@ _unit setCaptive true; // prevent AI from targeting invisible unit
 
 // play cloak in sound
 if (tts_cloak_playSounds) then {
-	_source = "Sign_Sphere10cm_F" createVehicle (getPosATL _unit); // create seperate sound source to player
-	[_source, true] remoteExec ["hideObjectGlobal", 2, false]; // make the sound source invisible
+	_source = "Land_HelipadEmpty_F" createVehicle [0,0,0]; // create seperate sound source to player 
 	_source attachTo [_unit, [0,0,1]];
 
 	[_source, "cloak_engage"] remoteExec ["say3D", 0, false];
@@ -74,8 +73,7 @@ _unit setVariable ["tts_cloak_isCloaked", false, true]; // make sure cloak is di
 
 // play cloak out sound
 if (tts_cloak_playSounds) then {
-	_source = "Sign_Sphere10cm_F" createVehicle (getPosATL _unit); // create seperate sound source to player
-	[_source, true] remoteExec ["hideObjectGlobal", 2, false]; // make the sound source invisible
+	_source = "Land_HelipadEmpty_F" createVehicle [0,0,0]; // create seperate sound source to player
 	_source attachTo [_unit, [0,0,1]];
 
 	if (tts_cloak_activeFor >= _duration) then {

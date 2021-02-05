@@ -29,17 +29,20 @@ if (!hasInterface) exitWith {}; // prevent dedi and HC from running particles
 // get list of points and particle sizes
 _dropPoints = [
 	["head", 0.6, [0,0,0]],
-	["spine", 1, [0,0.3,0]],
-	["pelvis", 0.8, [0,0,0]],
+	["spine3", 0.8, [0,0,0]],
+	["pelvis", 0.6, [0,0,0]],
 	["leftforearm", 0.5, [0,0,0]],
 	["leftforearmroll", 0.4, [0,0,0]],
 	["rightforearm", 0.5, [0,0,0]],
 	["rightforearmroll", 0.4, [0,0,0]],
-	["leftleg", 0.5, [0,0,0]],
-	["leftfoot", 0.4, [0,0,0]],
-	["rightleg", 0.5, [0,0,0]],
-	["rightfoot", 0.4, [0,0,0]]
+	["leftleg", 0.6, [0,0,0]],
+	["leftfoot", 0.5, [0,0,0]],
+	["rightleg", 0.6, [0,0,0]],
+	["rightfoot", 0.5, [0,0,0]]
 ];
+
+/*private _sphere = "Sign_Sphere25cm_F" createVehicleLocal (getPos _unit);
+_sphere attachTo [_unit, [0,0,0], "spine3"];*/
 
 while {_unit getVariable ["tts_cloak_isCloaked", false] && alive _unit} do {
 	waitUntil {player distance _unit < 100 || !(_unit getVariable ["tts_cloak_isCloaked", false])}; // wait until player is close enough to see

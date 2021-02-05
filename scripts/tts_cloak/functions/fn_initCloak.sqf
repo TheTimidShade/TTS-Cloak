@@ -2,73 +2,45 @@
 	Author: TheTimidShade
 
 	Description:
-		Initialises settings for cloak script.
+		Initialises settings for cloak script and adds EHs for players
 
 	Parameters:
-		0: ARRAY (OPTIONAL) - Array of uniforms which are considered 'cloaking' uniforms.
-		1: ARRAY (OPTIONAL) - Array of headgear which are considered 'cloaking' headgear.
-		2: BOOL (OPTIONAL) - Whether or not the unit must put away their weapon to cloak.
-		3: BOOL (OPTIONAL) - Whether or not the unit will uncloak when firing their weapon or throwing grenades.
-		4: BOOL (OPTIONAL) - Whether or not to play sounds when entering/exiting cloak.
-		5: BOOL (OPTIONAL) - Whether or not to play 'cloak engaged' voice after activating cloak.
-		6: BOOL (OPTIONAL) - Whether or not to use the cloak UI to show cloak time/cooldown.
+		NONE
 		
 	Returns:
 		NOTHING
 
 	Execution:
-		Should be executed on all clients + server from 'init.sqf'.
-	
-	Example:
-		[
-			["U_O_V_Soldier_Viper_hex_F"], 	// require viper uniform
-			["H_HelmetO_ViperSP_hex_F"], 	// require viper helmet
-			true, 							// weapon must be holstered
-			true,							// decloaked when firing/throwing grenades
-			true,							// play cloak sound effects
-			true,							// play 'cloak engaged' voice
-			false							// cloak ui is not displayed
-		] spawn tts_cloak_fnc_initCloak;
+		Should be executed on all clients and server from init.sqf
 */
 
-params [
-	["_uniforms", [], [[]]],
-	["_headgear", [], [[]]],
-	["_requireHolstered", true, [true]],
-	["_decloakOnFired", true, [true]],
-	["_playSounds", true, [true]],
-	["_playVoice", true, [true]],
-	["_useUI", true, [true]]
-];
+// set up settings if they are undefined
+if (isNil "tts_cloak_uniforms") then {tts_cloak_uniforms = [""];};
+if (isNil "tts_cloak_headgear") then {tts_cloak_headgear = [""];};
+if (isNil "tts_cloak_requireHolstered") then {tts_cloak_requireHolstered = true;};
+if (isNil "tts_cloak_decloakOnFired") then {tts_cloak_decloakOnFired = true;};
+if (isNil "tts_cloak_playSounds") then {tts_cloak_playSounds = true;};
+if (isNil "tts_cloak_playVoice") then {tts_cloak_playVoice = true;};
+if (isNil "tts_cloak_useUI") then {tts_cloak_useUI = true;};
 
-// cloak uniforms
-if (count _uniforms == 0) then {
-	tts_cloak_uniforms = [""];
-} else {
-	tts_cloak_uniforms = _uniforms; 
+if (isServer) then {{publicVariable _x;} forEach [ // publish server settings to all clients
+		"tts_cloak_uniforms",
+		"tts_cloak_headgear",
+		"tts_cloak_requireHolstered",
+		"tts_cloak_decloakOnFired",
+		"tts_cloak_playSounds",
+		"tts_cloak_playVoice",
+		"tts_cloak_useUI"
+	];
 };
 
-// cloak headgear
-if (count _headgear == 0) then {
-	tts_cloak_headgear = [""];
-} else {
-	tts_cloak_headgear = _headgear; 
-};
-
-// define settings
-tts_cloak_requireHolstered = _requireHolstered;
-tts_cloak_decloakOnFired = _decloakOnFired;
-tts_cloak_playSounds = _playSounds;
-tts_cloak_playVoice = _playVoice;
-tts_cloak_useUI = _useUI;
+if (!hasInterface) exitWith {};
 
 // define variables
 tts_cloak_cooldown = 0;
 tts_cloak_activeFor = 0;
 tts_cloak_showDisplay = false;
 tts_cloak_displayText = parseText "CLOAK:";
-
-if (!hasInterface) exitWith {};
 
 waitUntil {!(isNull player)};
 

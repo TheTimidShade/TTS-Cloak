@@ -10,7 +10,15 @@ class tts_cloak
 		class cloakTransition {};
 		class updateCloakDisplay {};
 		class giveCloak {};
-		class makePredator {};
+		class removeCloak {};
 		class cloakAI {};
+		class customZeusModules {};
+	};
+	class modules {
+		file = "scripts\tts_cloak\functions\modules";
+		class module_changeSettings {};
+		class module_giveCloak {};
+		class module_removeCloak {};
+		class module_cloakUnit {};
 	};
 };

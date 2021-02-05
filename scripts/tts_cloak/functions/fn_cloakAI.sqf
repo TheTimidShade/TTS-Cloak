@@ -24,6 +24,7 @@ params [
 ];
 
 if (isNull _unit) exitWith {};
+if (!(_unit isKindOf "CAManBase")) exitWith {};
 
 if (_unit getVariable ["tts_cloak_isCloaked", false]) exitWith {}; // if the unit is already cloaked exit
 
@@ -33,7 +34,10 @@ _unit setCaptive true; // prevent AI from targeting invisible unit
 
 // play cloak in sound
 if (tts_cloak_playSounds) then {
-	[_unit, "cloak_engage"] remoteExec ["say3D", 0, false];
+	private _source = "Land_HelipadEmpty_F" createVehicle [0,0,0]; // create seperate sound source
+	_source attachTo [_unit, [0,0,1]];
+	[_source, "cloak_engage"] remoteExec ["say3D", 0, false];
+	_source spawn {sleep 10; deleteVehicle _this;}; // wait and delete source
 };
 
 // create cloak transition particles
@@ -42,7 +46,8 @@ if (tts_cloak_playSounds) then {
 // create cloak particles
 [_unit] remoteExec ["tts_cloak_fnc_cloakParticles", 0, false];
 
-sleep _duration;
+private _cloakTime = 0;
+waitUntil {sleep 0.1; _cloakTime = _cloakTime + 0.1; _cloakTime > _duration || !(_unit getVariable ["tts_cloak_isCloaked", false])};
 
 _unit setVariable ["tts_cloak_isCloaked", false, true]; // decloak unit
 
@@ -51,7 +56,10 @@ _unit setVariable ["tts_cloak_isCloaked", false, true]; // decloak unit
 
 // play cloak out sound
 if (tts_cloak_playSounds) then {
-	[_unit, "cloak_disengage_hot"] remoteExec ["say3D", 0, false];
+	_source = "Land_HelipadEmpty_F" createVehicle [0,0,0]; // create seperate sound source
+	_source attachTo [_unit, [0,0,1]];
+	[_source, "cloak_disengage_hot"] remoteExec ["say3D", 0, false];
+	_source spawn {sleep 10; deleteVehicle _this;}; // wait and delete source
 };
 
 [_unit, false] remoteExec ["hideObjectGlobal", 2, false]; // make the unit visible

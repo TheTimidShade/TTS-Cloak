@@ -22,15 +22,3 @@ class cloak_disengage_hot
     sound[] = {"scripts\tts_cloak\sounds\disengageHot.ogg", 1, 1, 15};
     titles[] = {0,""};
 };
-class cloak_predator_1
-{
-    name = "cloak_predator_1";
-    sound[] = {"scripts\tts_cloak\sounds\predator1.ogg", 6, 1, 400};
-    titles[] = {0,""};
-};
-class cloak_predator_2
-{
-    name = "cloak_predator_2";
-    sound[] = {"scripts\tts_cloak\sounds\predator2.ogg", 6, 1, 400};
-    titles[] = {0,""};
-};
