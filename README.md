@@ -17,6 +17,24 @@ Designed for Arma 3, this script gives player and AI units the ability to turn (
 4. Add cloak abilities to desired units using `[unitName, _duration, _cooldown] spawn tts_cloak_fnc_giveCloak;`. The simplest way of doing this for player units is through `initPlayerLocal.sqf` (See example `initPlayerLocal.sqf`).
 5. Optionally, if you want to use the script from Zeus you will need to add `[] spawn tts_cloak_fnc_customZeusModules;` to `initPlayerLocal.sqf` (Also shown in example `initPlayerLocal.sqf`).
 
+### Settings  
+Below is a list of settings that can be changed to suit the way you want to use the cloak script. Place the lines you wish to change in `init.sqf` before the initCloak function.  
+
+If the empty string "" is in the uniforms or headgear array, that equipment will be ignored in the fn_hasCloak check. e.g. 
+```sqf 
+tts_cloak_uniforms = ["yourUniform"]; tts_cloak_headgear = [""];
+```
+Only 'yourUniform' will be required in order to cloak, headgear will not matter  
+```sqf
+tts_cloak_uniforms = [""]; // uniform classnames used as 'cloak' uniforms, can retrieve them from arsenal export
+tts_cloak_headgear = [""]; // headgear classnames used as 'cloak' headgear
+tts_cloak_requireHolstered = true; // if true, players weapon will be holstered when entering cloak
+tts_cloak_decloakOnFired = true; // if true, throwing grenades or shooting will uncloak the player
+tts_cloak_playSounds = true; // whether or not to play cloak in/out sounds
+tts_cloak_playVoice = true; // whether or not to play 'cloak engaged' voice when entering cloak
+tts_cloak_useUI = true; // whether or not to show cloak UI (cloak time/cooldown)
+```
+
 ## Changelog
 Read below for complete changelog history.
 
