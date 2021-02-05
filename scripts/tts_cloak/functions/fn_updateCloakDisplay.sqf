@@ -32,7 +32,7 @@ if (_display isEqualTo displayNull) exitWith {systemChat "exited";};
 
 _textBox = _display displayCtrl IDC_CLOAK_UI_CLOAK_DISP_TEXT;
 
-while {tts_cloak_showDisplay && alive player && [player] call tts_cloak_fnc_hasCloak} do {
+while {tts_cloak_showDisplay && alive player && [player] call tts_cloak_fnc_hasCloak && tts_cloak_useUI} do {
 	if (!(player getVariable ["tts_cloak_isCloaked", false])) then { // check if player is cloaked or not
 		if (tts_cloak_cooldown <= 0) then { // not cloaked and cooldown finished, show 'ready'
 			tts_cloak_displayText = parseText _readyMessage;
@@ -50,5 +50,9 @@ while {tts_cloak_showDisplay && alive player && [player] call tts_cloak_fnc_hasC
 
 	sleep 0.1;
 };
+
+// hide the UI if the UI settings were changed or the player had their cloak removed
+if (!tts_cloak_useUI) then {tts_cloak_showDisplay = false;};
+if (player getVariable ["tts_cloak_cloakDisabled", false]) then {tts_cloak_showDisplay = false;};
 
 _layer cutText ["", "PLAIN", 0];

@@ -1,6 +1,6 @@
 // ACHILLES /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
-	["Cloaking", "Change Settings", 
+	["TTS Cloaking", "Change Settings", 
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
@@ -52,7 +52,7 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then 
 
 // ZEUS ENHANCED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
-	["Cloaking", "Change Settings",
+	["TTS Cloaking", "Change Settings",
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_attachedObject", objNull, [objNull]]];
 
