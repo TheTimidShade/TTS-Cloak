@@ -31,7 +31,7 @@ _unit setCaptive true; // prevent AI from targeting invisible unit
 
 // play cloak in sound
 if (tts_cloak_playSounds) then {
-	_source = "Land_HelipadEmpty_F" createVehicle [0,0,0]; // create seperate sound source to player 
+	private _source = "Land_HelipadEmpty_F" createVehicle [0,0,0]; // create seperate sound source to player 
 	_source attachTo [_unit, [0,0,1]];
 
 	[_source, "cloak_engage"] remoteExec ["say3D", 0, false];
@@ -60,20 +60,20 @@ if (tts_cloak_playVoice) then {
 };
 
 // while the unit is cloaked, check states for when to end cloak
-_duration = _unit getVariable ["tts_cloak_duration", 0];
-while {alive _unit && (_unit getVariable ['tts_cloak_isCloaked',false])} do {
-	if (tts_cloak_activeFor >= _duration || vehicle _unit != _unit || (tts_cloak_requireHolstered && currentWeapon _unit != "")) then {
+private _duration = _unit getVariable ["tts_cloak_duration", 0];
+while {_unit getVariable ['tts_cloak_isCloaked',false]} do {
+	if (tts_cloak_activeFor >= _duration || vehicle _unit != _unit || (tts_cloak_requireHolstered && currentWeapon _unit != "") || !(_unit call tts_cloak_fnc_hasCloak) || !alive _unit) then {
 		_unit setVariable ["tts_cloak_isCloaked", false, true];
 	};
+	sleep 0.05;
 };
-_unit setVariable ["tts_cloak_isCloaked", false, true]; // make sure cloak is disabled if unit is killed
 
 // create cloak transition particles
 [_unit] remoteExec ["tts_cloak_fnc_cloakTransition", 0, false];
 
 // play cloak out sound
 if (tts_cloak_playSounds) then {
-	_source = "Land_HelipadEmpty_F" createVehicle [0,0,0]; // create seperate sound source to player
+	private _source = "Land_HelipadEmpty_F" createVehicle [0,0,0]; // create seperate sound source to player
 	_source attachTo [_unit, [0,0,1]];
 
 	if (tts_cloak_activeFor >= _duration) then {

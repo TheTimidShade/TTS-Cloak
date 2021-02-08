@@ -38,6 +38,9 @@ tts_cloak_useUI = true; // whether or not to show cloak UI (cloak time/cooldown)
 ## Changelog
 Read below for complete changelog history.
 
+### 08/02/2021
+- Tweaked particles slightly to decrease unit visibility.
+
 ### 05/02/2021
 - Adjusted fn_customZeusModules slightly so it should correctly add the modules more reliably.
 

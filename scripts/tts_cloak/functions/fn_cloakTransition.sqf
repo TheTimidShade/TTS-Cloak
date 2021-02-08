@@ -25,8 +25,7 @@ if (isNull _unit) exitWith {};
 
 if (!hasInterface) exitWith {}; // prevent dedi and HC from running particles
 
-_source = "Sign_Sphere10cm_F" createVehicleLocal (getPosATL _unit); // create particle source
-_source hideObject true;
+private _source = "Land_HelipadEmpty_F" createVehicleLocal (getPosATL _unit); // create particle source
 _source attachTo [_unit, [0,0,0], "pelvis"];
 
 drop [

@@ -56,7 +56,7 @@ _unit setVariable ["tts_cloak_isCloaked", false, true]; // decloak unit
 
 // play cloak out sound
 if (tts_cloak_playSounds) then {
-	_source = "Land_HelipadEmpty_F" createVehicle [0,0,0]; // create seperate sound source
+	private _source = "Land_HelipadEmpty_F" createVehicle [0,0,0]; // create seperate sound source
 	_source attachTo [_unit, [0,0,1]];
 	[_source, "cloak_disengage_hot"] remoteExec ["say3D", 0, false];
 	_source spawn {sleep 10; deleteVehicle _this;}; // wait and delete source

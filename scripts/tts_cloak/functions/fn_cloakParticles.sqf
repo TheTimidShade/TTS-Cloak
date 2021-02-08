@@ -27,7 +27,7 @@ if (isNull _unit) exitWith {};
 if (!hasInterface) exitWith {}; // prevent dedi and HC from running particles
 
 // get list of points and particle sizes
-_dropPoints = [
+private _dropPoints = [
 	["head", 0.6, [0,0,0]],
 	["spine3", 0.8, [0,0,0]],
 	["pelvis", 0.6, [0,0,0]],
@@ -45,15 +45,12 @@ _dropPoints = [
 _sphere attachTo [_unit, [0,0,0], "spine3"];*/
 
 while {_unit getVariable ["tts_cloak_isCloaked", false] && alive _unit} do {
-	waitUntil {player distance _unit < 100 || !(_unit getVariable ["tts_cloak_isCloaked", false])}; // wait until player is close enough to see
 	// create emitters
-	_emitterArray = [];
+	private _emitterArray = [];
 	{
-		_memPoint = _x#0;
-		_size = _x#1;
-		_offset = _x#2;
+		_x params ["_memPoint", "_size", "_offset"];
 
-		_distort = "#particlesource" createVehicleLocal (getPosATL _unit);
+		private _distort = "#particlesource" createVehicleLocal (getPosATL _unit);
 		_distort attachTo [_unit, _offset, _memPoint];
 
 		_distort setParticleParams [
@@ -68,7 +65,7 @@ while {_unit getVariable ["tts_cloak_isCloaked", false] && alive _unit} do {
 			7.9,
 			0, 
 			[_size],
-			[[0,0,0,1]],
+			[[0,0,0,0.7]],
 			[0.08],
 			1,
 			0,
@@ -88,5 +85,36 @@ while {_unit getVariable ["tts_cloak_isCloaked", false] && alive _unit} do {
 	{
 		deleteVehicle _x;
 	} forEach _emitterArray;
+
+	private _source = "Land_HelipadEmpty_F" createVehicleLocal (getPosATL _unit); 
+	_source attachTo [_unit, [0,0,0], "pelvis"];
+	
+	while {player distance _unit > 100 && (_unit getVariable ["tts_cloak_isCloaked", false])} do {
+		if (player distance _unit < 1000) then {
+			drop [
+				["\A3\data_f\ParticleEffects\Universal\Refract.p3d", 1, 0, 1],
+				"","Billboard",
+				1,
+				0.2,
+				[0, 0, 0],
+				[0, 0, 0],
+				17,
+				10,
+				7.9,
+				0, 
+				[1.3],
+				[[0,0,0,0.7]],
+				[0.08],
+				1,
+				0,
+				"",
+				"",
+				_source
+			];
+		};
+		sleep 0.1;
+	};
+
+	deleteVehicle _source;
 };
 
