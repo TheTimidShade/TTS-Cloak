@@ -72,4 +72,4 @@ if (_unit getVariable ['tts_cloak_hasActions',false]) exitWith {}; // don't add 
 },
 [], 6, false, true, "", "tts_cloak_useUI && alive _target && [player] call tts_cloak_fnc_hasCloak && !(player getVariable ['tts_cloak_cloakDisabled',false])", 0, false]] remoteExec ["addAction", _unit, false];
 
-player setVariable ["tts_cloak_hasActions", true, true];
+_unit setVariable ["tts_cloak_hasActions", true, true];
