@@ -12,6 +12,7 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then 
 		if (isNil "tts_cloak_playSounds") then {tts_cloak_playSounds = true;};
 		if (isNil "tts_cloak_playVoice") then {tts_cloak_playVoice = true;};
 		if (isNil "tts_cloak_useUI") then {tts_cloak_useUI = true;};
+		if (isNil "tts_cloak_useUIVehicle") then {tts_cloak_useUIVehicle = true;};
 
 		private _dialogResult = [
 			"Configure Cloak Settings",
@@ -22,7 +23,8 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then 
 				["Decloak when firing", ["True", "False"], 0],
 				["Play sounds", ["True", "False"], 0],
 				["Play voice", ["True", "False"], 0],
-				["Use UI", ["True", "False"], 0]
+				["Use UI", ["True", "False"], 0],
+				["Use vehicle UI", ["True", "False"], 0]
 			]
 		] call Ares_fnc_showChooseDialog;
 
@@ -37,6 +39,7 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then 
 		tts_cloak_playSounds = (_dialogResult#4) call _fnc_indexToBool;
 		tts_cloak_playVoice = (_dialogResult#5) call _fnc_indexToBool;
 		tts_cloak_useUI = (_dialogResult#6) call _fnc_indexToBool;
+		tts_cloak_useUIVehicle = (_dialogResult#7) call _fnc_indexToBool;
 
 		{publicVariable _x;} forEach [ // publish settings to all clients
 			"tts_cloak_uniforms",
@@ -45,7 +48,8 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then 
 			"tts_cloak_decloakOnFired",
 			"tts_cloak_playSounds",
 			"tts_cloak_playVoice",
-			"tts_cloak_useUI"
+			"tts_cloak_useUI",
+			"tts_cloak_useUIVehicle"
 		];
 	}] call Ares_fnc_RegisterCustomModule;
 };
@@ -64,6 +68,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 		if (isNil "tts_cloak_playSounds") then {tts_cloak_playSounds = true;};
 		if (isNil "tts_cloak_playVoice") then {tts_cloak_playVoice = true;};
 		if (isNil "tts_cloak_useUI") then {tts_cloak_useUI = true;};
+		if (isNil "tts_cloak_useUIVehicle") then {tts_cloak_useUIVehicle = true;};
 
 		[
 			"Configure Cloak Settings", // title
@@ -118,6 +123,13 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 						["True", "False"], // labels
 						0 // element 0 is default selected
 					]
+				],
+				["COMBO", ["Use vehicle UI", "Should the active camo UI be available to players?"],
+					[ // control args
+						[true, false], // return values
+						["True", "False"], // labels
+						0 // element 0 is default selected
+					]
 				]
 			],
 			{ // code run on dialog closed (only run if OK is clicked)
@@ -130,6 +142,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 				tts_cloak_playSounds = _dialogResult#4;
 				tts_cloak_playVoice = _dialogResult#5;
 				tts_cloak_useUI = _dialogResult#6;
+				tts_cloak_useUIVehicle = _dialogResult#7;
 
 				{publicVariable _x;} forEach [ // publish settings to all clients
 					"tts_cloak_uniforms",
@@ -138,7 +151,8 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					"tts_cloak_decloakOnFired",
 					"tts_cloak_playSounds",
 					"tts_cloak_playVoice",
-					"tts_cloak_useUI"
+					"tts_cloak_useUI",
+					"tts_cloak_useUIVehicle"
 				];
 			}, {}, [] // args
 		] call zen_dialog_fnc_create;

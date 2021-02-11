@@ -32,6 +32,15 @@ _unit setVariable ["tts_cloak_isCloaked", true, true]; // set cloak variable to 
 [_unit, true] remoteExec ["hideObjectGlobal", 2, false]; // make the unit invisible
 _unit setCaptive true; // prevent AI from targeting invisible unit
 
+private ["_targetAIEnabled", "_autotargetAIEnabled"];
+if (!isPlayer _unit) then { // prevent AI units from shooting enemies while cloaked
+	_targetAIEnabled = _unit checkAIFeature "TARGET";
+	_autotargetAIEnabled = _unit checkAIFeature "AUTOTARGET";
+	if (_targetAIEnabled) then {_unit disableAI "TARGET"};
+	if (_autotargetAIEnabled) then {_unit disableAI "AUTOTARGET"};
+	_unit doWatch objNull; // reset the units target
+};
+
 // play cloak in sound
 if (tts_cloak_playSounds) then {
 	private _source = "Land_HelipadEmpty_F" createVehicle [0,0,0]; // create seperate sound source
@@ -64,3 +73,8 @@ if (tts_cloak_playSounds) then {
 
 [_unit, false] remoteExec ["hideObjectGlobal", 2, false]; // make the unit visible
 _unit setCaptive false; // allow AI targeting again
+
+if (!isPlayer _unit) then { // re-enable AI features if they were enabled on cloak start
+	if (_targetAIEnabled) then {_unit enableAI "TARGET"};
+	if (_autotargetAIEnabled) then {_unit enableAI "AUTOTARGET"};
+};

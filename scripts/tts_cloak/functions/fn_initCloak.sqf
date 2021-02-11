@@ -41,6 +41,8 @@ tts_cloak_cooldown = 0;
 tts_cloak_activeFor = 0;
 tts_cloak_showDisplay = false;
 tts_cloak_displayText = parseText "CLOAK:";
+tts_cloak_showDisplayVehicle = false;
+tts_cloak_displayTextVehicle = parseText "CAMO:";
 
 waitUntil {!(isNull player)};
 

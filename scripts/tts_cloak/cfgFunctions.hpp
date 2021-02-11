@@ -13,6 +13,11 @@ class tts_cloak
 		class removeCloak {};
 		class cloakAI {};
 		class customZeusModules {};
+		class giveVehicleCloak {};
+		class startVehicleCloak {};
+		class setupPIPcamera {};
+		class updateCloakDisplayVehicle {};
+		class vehicleCloakEffect {};
 	};
 	class modules {
 		file = "scripts\tts_cloak\functions\modules";
@@ -20,5 +25,6 @@ class tts_cloak
 		class module_giveCloak {};
 		class module_removeCloak {};
 		class module_cloakUnit {};
+		class module_giveVehicleCloak {};
 	};
 };

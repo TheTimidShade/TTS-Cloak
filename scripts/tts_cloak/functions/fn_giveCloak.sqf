@@ -39,7 +39,7 @@ _unit setVariable ["tts_cloak_cloakDisabled", false, true]; // used to prevent u
 _unit setVariable ["tts_cloak_duration", _duration, true];
 _unit setVariable ["tts_cloak_cooldown", _cooldown, true];
 
-if (_unit getVariable ['tts_cloak_hasActions',false]) exitWith {}; // don't add actions if player already has them
+if (_unit getVariable ["tts_cloak_hasActions",false]) exitWith {}; // don't add actions if player already has them
 
 // set up actions
 [_unit, ["<t color='#00d615'>Activate cloak</t>", {
