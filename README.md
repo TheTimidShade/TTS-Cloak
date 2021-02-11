@@ -16,7 +16,8 @@ Designed for Arma 3, this script gives player and AI units the ability to turn (
 2. Excluding `README.md`, move files into your mission folder and merge `description.ext` and `init.sqf` with your existing files (if you have them).
 3. Configure settings in `init.sqf`.
 4. Add cloak abilities to desired units using `[unitName, _duration, _cooldown] spawn tts_cloak_fnc_giveCloak;`. The simplest way of doing this for player units is through `initPlayerLocal.sqf` (See example `initPlayerLocal.sqf`).
-5. Optionally, if you want to use the script from Zeus you will need to add `[] spawn tts_cloak_fnc_customZeusModules;` to `initPlayerLocal.sqf` (Also shown in example `initPlayerLocal.sqf`).
+5. Add cloak abilities to desired vehicles using `[vehicleName, "someUniqueString", _duration, _cooldown] spawn tts_cloak_fnc_giveVehicleCloak;`. The simplest way to do this is through `initServer.sqf` or `init.sqf` (See example `init.sqf` from GitHub download). This function needs to be executed on the server to work.
+6. Optionally, if you want to use the script from Zeus you will need to add `[] spawn tts_cloak_fnc_customZeusModules;` to `initPlayerLocal.sqf` (Also shown in example `initPlayerLocal.sqf`).
 
 ### Settings  
 Below is a list of settings that can be changed to suit the way you want to use the cloak script. Place the lines you wish to change in `init.sqf` before the initCloak function.  
