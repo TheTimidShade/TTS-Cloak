@@ -2,6 +2,13 @@
 ## Overview:
 Designed for Arma 3, this script gives player and AI units the ability to turn (almost) invisible by activating a cloaking device. When a unit is cloaked, a blurry predator/crysis style cloak is shown while the unit's model is hidden. Unfortunately, a side effect of hiding an object in Arma 3 is it disables it's collision, so while the cloak is active the cloaked unit is invincible, can clip through other units, objects, buildings, etc and can get stuck when deactivating the cloak inside an object. Short cloak duration and moderate cooldown is recommended for good balance.
 
+You will not be able to use this script from Zeus unless one of either Achilles or Zeus Enhanced is loaded.
+
+Demo Video: https://youtu.be/Hasma9EI7sM  
+Steam Workshop page: https://steamcommunity.com/sharedfiles/filedetails/?id=2388444766  
+Achilles: https://steamcommunity.com/sharedfiles/filedetails/?id=723217262  
+Zeus Enhanced: https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631  
+
 ## Features:
 - Small display to keep track of cloak status
 - Cloak activation/deactivation sounds
