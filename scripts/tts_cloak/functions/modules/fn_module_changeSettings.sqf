@@ -1,5 +1,5 @@
 // ACHILLES /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
+/*if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
 	["TTS Cloaking", "Change Settings", 
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
@@ -52,7 +52,7 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then 
 			"tts_cloak_useUIVehicle"
 		];
 	}] call Ares_fnc_RegisterCustomModule;
-};
+};*/
 
 // ZEUS ENHANCED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {

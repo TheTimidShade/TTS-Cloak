@@ -3,7 +3,7 @@ class tts_cloak
 	class cloak
 	{
 		file = "scripts\tts_cloak\functions";
-		class initCloak {};
+		class initCloak {postInit = 1;};
 		class hasCloak {};
 		class startCloak {};
 		class cloakParticles {};
@@ -12,7 +12,7 @@ class tts_cloak
 		class giveCloak {};
 		class removeCloak {};
 		class cloakAI {};
-		class customZeusModules {};
+		class customZeusModules {preInit = 1;};
 		class giveVehicleCloak {};
 		class startVehicleCloak {};
 		class setupPIPcamera {};

@@ -8,10 +8,10 @@ tts_cloak_playVoice = true;
 tts_cloak_useUI = true;
 tts_cloak_useUIVehicle = true;
 
-[] spawn tts_cloak_fnc_initCloak;
-
-// set up vehicle cloaking
+// vehicle cloaking example
+/*
 if (isServer) then {
 	[vehicle1, "vehicle1", 30, 5] spawn tts_cloak_fnc_giveVehicleCloak;
 	[vehicle2, "vehicle2", 30, 5] spawn tts_cloak_fnc_giveVehicleCloak;
 };
+*/

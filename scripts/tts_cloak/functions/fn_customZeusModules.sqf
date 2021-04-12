@@ -11,6 +11,8 @@
 		NONE
 */
 
+[] spawn {
+
 waitUntil {player == player && !isNull getAssignedCuratorLogic player};
 
 [] call tts_cloak_fnc_module_changeSettings;
@@ -18,3 +20,5 @@ waitUntil {player == player && !isNull getAssignedCuratorLogic player};
 [] call tts_cloak_fnc_module_removeCloak;
 [] call tts_cloak_fnc_module_cloakUnit;
 [] call tts_cloak_fnc_module_giveVehicleCloak;
+
+};

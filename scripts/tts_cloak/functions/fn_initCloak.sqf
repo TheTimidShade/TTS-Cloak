@@ -14,6 +14,8 @@
 		Should be executed on all clients and server from init.sqf
 */
 
+[] spawn {
+
 // set up settings if they are undefined
 if (isNil "tts_cloak_uniforms") then {tts_cloak_uniforms = [""];};
 if (isNil "tts_cloak_headgear") then {tts_cloak_headgear = [""];};
@@ -71,4 +73,6 @@ if (!(player getVariable ["tts_cloak_hasRespawnEH", false])) then {
 		player setVariable ["tts_cloak_hasActions", false, true]; // player doesn't have cloak actions anymore
 	}];
 	player setVariable ["tts_cloak_hasRespawnEH", true, true];
+};
+
 };

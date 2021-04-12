@@ -24,7 +24,6 @@ Zeus Enhanced: https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631
 3. Configure settings in `init.sqf`.
 4. Add cloak abilities to desired units using `[unitName, _duration, _cooldown] spawn tts_cloak_fnc_giveCloak;`. The simplest way of doing this for player units is through `initPlayerLocal.sqf` (See example `initPlayerLocal.sqf`).
 5. Add cloak abilities to desired vehicles using `[vehicleName, "someUniqueString", _duration, _cooldown] spawn tts_cloak_fnc_giveVehicleCloak;`. The simplest way to do this is through `initServer.sqf` or `init.sqf` (See example `init.sqf` from GitHub download). This function needs to be executed on the server to work.
-6. Optionally, if you want to use the script from Zeus you will need to add `[] spawn tts_cloak_fnc_customZeusModules;` to `initPlayerLocal.sqf` (Also shown in example `initPlayerLocal.sqf`).
 
 ### Settings  
 Below is a list of settings that can be changed to suit the way you want to use the cloak script. Place the lines you wish to change in `init.sqf` before the initCloak function.  
@@ -48,6 +47,10 @@ tts_cloak_useUIVehicle = true; // whether or not to show active camo UI (vehicle
 ## Changelog
 Read below for complete changelog history.
 
+### 12/04/2021
+- Removed need to execute `fn_initCloak` and `fn_customZeusModules` manually.
+- Removed Achilles compatibility (no longer supported).
+
 ### 11/02/2021
 - Added Twiznak's active camouflage functionality for vehicles using PIP cameras.
 - Added 'Give Active Camouflage' module to allow dynamic adding of vehicle active camo.  
@@ -55,14 +58,14 @@ Read below for complete changelog history.
 **WARNING:** Adding/removing vehicle cloaks creates/deletes PIP cameras, which can interfere with the Spectator/Zeus camera. Usually this requires the player to close and reopen the Spectator/Zeus camera however it can cause issues for units with forced Zeus interface since they are not able to close and reopen the interface. Use vehicle cloak with caution if using Spectator/Zeus in mission.
 - Minor tweaks to hopefully make the script more JIP compatible.
 - Cloaking AI now properly prevents them from shooting while they are cloaked by disabling "TARGET" and "AUTOTARGET" AI, will preserve state if the AI had this disabled already before cloaking.
-- Fixed a typo in fn_giveCloak which would cause issues with interaction menu actions.
+- Fixed a typo in `fn_giveCloak` which would cause issues with interaction menu actions.
 - Added a new setting & display to show/hide vehicle camo UI seperately to cloak UI.
 
 ### 08/02/2021
 - Tweaked particles slightly to decrease unit visibility.
 
 ### 05/02/2021
-- Adjusted fn_customZeusModules slightly so it should correctly add the modules more reliably.
+- Adjusted `fn_customZeusModules` slightly so it should correctly add the modules more reliably.
 
 ### 04/02/2021
 - Fixed positioning and size of some particle drop points.

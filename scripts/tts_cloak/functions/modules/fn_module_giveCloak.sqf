@@ -1,5 +1,5 @@
 // ACHILLES /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
+/*if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
 	["TTS Cloaking", "Give Cloak", 
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
@@ -20,7 +20,7 @@ if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then 
 
 		[_objectUnderCursor, parseNumber (_dialogResult#0), parseNumber (_dialogResult#1)] remoteExec ["tts_cloak_fnc_giveCloak", _objectUnderCursor, false];
 	}] call Ares_fnc_RegisterCustomModule;
-};
+};*/
 
 // ZEUS ENHANCED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
