@@ -5,4 +5,5 @@ Source code for mod version of my Cloak/Active Camo Script.
 Read below for complete changelog history.
 
 ### 12/07/2021
+- Added custom icons for ZEN modules.
 - Initial upload.

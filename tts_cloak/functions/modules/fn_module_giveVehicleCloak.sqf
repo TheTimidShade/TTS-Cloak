@@ -1,31 +1,3 @@
-// ACHILLES /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
-	["TTS Cloaking", "Give Active Camouflage", 
-	{
-		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-		if (isNull _objectUnderCursor || !(_objectUnderCursor isKindOf "AllVehicles") || _objectUnderCursor isKindOf "CAManBase") exitWith {
-			["Must be placed on a vehicle!"] call Achilles_fnc_showZeusErrorMessage;
-		};
-
-		private _dialogResult = [
-			"Give Active Camouflage",
-			[
-				["Unique identifier", "", "", true],
-				["Camo max duration", "", str 120, false],
-				["Camo cooldown", "", str 300, false]
-			]
-		] call Ares_fnc_showChooseDialog;
-
-		if (_dialogResult isEqualTo []) exitWith{}; // if dialog was closed exit
-		if (_dialogResult#0 == "") exitWith {
-			["Identifier must be unique, non-empty string!"] call Achilles_fnc_showZeusErrorMessage;
-		};
-
-		[_objectUnderCursor, (_dialogResult#0), parseNumber (_dialogResult#1), parseNumber (_dialogResult#2)] remoteExec ["tts_cloak_fnc_giveVehicleCloak", 2, false];
-	}] call Ares_fnc_RegisterCustomModule;
-};
-
 // ZEUS ENHANCED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 	["TTS Cloaking", "Give Active Camouflage",
@@ -75,5 +47,5 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 				[_attachedObject, (_dialogResult#0), parseNumber (_dialogResult#1), parseNumber (_dialogResult#2)] remoteExec ["tts_cloak_fnc_giveVehicleCloak", 2, false];
 			}, {}, [_attachedObject] // args
 		] call zen_dialog_fnc_create;
-	}] call zen_custom_modules_fnc_register;
+	}, "tts_cloak\icons\cloak_vehicle.paa"] call zen_custom_modules_fnc_register;
 };

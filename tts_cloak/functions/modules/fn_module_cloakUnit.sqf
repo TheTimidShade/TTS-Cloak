@@ -1,26 +1,3 @@
-// ACHILLES /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
-	["TTS Cloaking", "Cloak Unit", 
-	{
-		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-		if (isNull _objectUnderCursor || !(_objectUnderCursor isKindOf "CAManBase")) exitWith {
-			["Must be placed on a unit!"] call Achilles_fnc_showZeusErrorMessage;
-		};
-
-		private _dialogResult = [
-			"Cloak Unit",
-			[
-				["Cloak duration", "", str 30, false]
-			]
-		] call Ares_fnc_showChooseDialog;
-
-		if (_dialogResult isEqualTo []) exitWith{}; // if dialog was closed exit
-
-		[_objectUnderCursor, parseNumber (_dialogResult#0)] remoteExec ["tts_cloak_fnc_cloakAI", _objectUnderCursor, false];
-	}] call Ares_fnc_RegisterCustomModule;
-};
-
 // ZEUS ENHANCED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 	["TTS Cloaking", "Cloak Unit",
@@ -50,5 +27,5 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 				[_attachedObject, parseNumber (_dialogResult#0)] remoteExec ["tts_cloak_fnc_cloakAI", _attachedObject, false];
 			}, {}, [_attachedObject] // args
 		] call zen_dialog_fnc_create;
-	}] call zen_custom_modules_fnc_register;
+	}, "tts_cloak\icons\cloak_man.paa"] call zen_custom_modules_fnc_register;
 };
