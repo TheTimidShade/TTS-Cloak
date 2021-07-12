@@ -71,6 +71,11 @@ if (!(player getVariable ["tts_cloak_hasRespawnEH", false])) then {
 		[_unit, false] remoteExec ["hideObjectGlobal", 2, false]; // make sure the unit is visible
 		_unit setCaptive false; // make sure unit is not captive
 		player setVariable ["tts_cloak_hasActions", false, true]; // player doesn't have cloak actions anymore
+
+		// if the player had a cloak before they respawned, re-apply it
+		if (player getVariable ["tts_cloak_duration", -1] != -1 && !(player getVariable ["tts_cloak_cloakDisabled", false])) then {
+			[player, player getVariable "tts_cloak_duration", player getVariable "tts_cloak_cooldown"] spawn tts_cloak_fnc_giveCloak;
+		}
 	}];
 	player setVariable ["tts_cloak_hasRespawnEH", true, true];
 };

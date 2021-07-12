@@ -105,7 +105,8 @@
 #define GRID_W (pixelW * pixelGrid * pixelScale)
 #define GRID_H (pixelH * pixelGrid * pixelScale)
 
-class RscCloakStructuredText
+class RscStructuredText;
+class RscCloakStructuredText: RscStructuredText
 {
 	deletable = 0;
 	fade = 0;
@@ -127,6 +128,8 @@ class RscCloakStructuredText
 	h = 0.035;
 	w = 0.1;
 	text = "";
+	font = "RobotoCondensed";
+	sizeEx = GUI_TEXT_SIZE_MEDIUM;
 	size = GUI_TEXT_SIZE_MEDIUM;
 	shadow = 1;
 };

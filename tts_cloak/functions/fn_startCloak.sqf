@@ -26,8 +26,7 @@ if (isNil "tts_cloak_cooldown") exitWith {}; // don't run unless cloak has been 
 if (!(_unit in allPlayers)) exitWith {}; // only run if the unit is a player
 
 _unit setVariable ["tts_cloak_isCloaked", true, true]; // set cloak variable to true
-[_unit, true] remoteExec ["hideObject", 0, false]; // make the unit invisible on all clients except local
-[_unit, false] remoteExec ["hideObject", _unit, false];
+[_unit, true] remoteExec ["hideObjectGlobal", 2, false]; // make the unit invisible
 _unit setCaptive true; // prevent AI from targeting invisible unit
 
 // play cloak in sound
@@ -86,7 +85,7 @@ if (tts_cloak_playSounds) then {
 	[_source] spawn {sleep 10; deleteVehicle (_this#0);}; // wait and delete source
 };
 
-[_unit, false] remoteExec ["hideObject", -2, false]; // make the unit visible
+[_unit, false] remoteExec ["hideObjectGlobal", 2, false]; // make the unit visible
 _unit setCaptive false; // allow AI targeting again
 
 // reset cloak timer and start cooldown
