@@ -1,27 +1,3 @@
-// ACHILLES /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*if (isClass (configFile >> "CfgPatches" >> "achilles_modules_f_achilles")) then {
-	["TTS Cloaking", "Give Cloak", 
-	{
-		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-		if (isNull _objectUnderCursor || !isPlayer _objectUnderCursor) exitWith {
-			["Must be placed on a player unit!"] call Achilles_fnc_showZeusErrorMessage;
-		};
-
-		private _dialogResult = [
-			"Give Unit Cloak",
-			[
-				["Cloak max duration", "", str 30, false],
-				["Cloak cooldown", "", str 60, false]
-			]
-		] call Ares_fnc_showChooseDialog;
-
-		if (_dialogResult isEqualTo []) exitWith{}; // if dialog was closed exit
-
-		[_objectUnderCursor, parseNumber (_dialogResult#0), parseNumber (_dialogResult#1)] remoteExec ["tts_cloak_fnc_giveCloak", _objectUnderCursor, false];
-	}] call Ares_fnc_RegisterCustomModule;
-};*/
-
 // ZEUS ENHANCED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 	["TTS Cloaking", "Give Cloak",
@@ -59,5 +35,5 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 				[_attachedObject, parseNumber (_dialogResult#0), parseNumber (_dialogResult#1)] remoteExec ["tts_cloak_fnc_giveCloak", _attachedObject, false];
 			}, {}, [_attachedObject] // args
 		] call zen_dialog_fnc_create;
-	}] call zen_custom_modules_fnc_register;
+	}, "scripts\tts_cloak\icons\cloak_man.paa"] call zen_custom_modules_fnc_register;
 };

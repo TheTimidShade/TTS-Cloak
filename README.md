@@ -46,6 +46,9 @@ tts_cloak_useUIVehicle = true; // whether or not to show active camo UI (vehicle
 ## Changelog
 Read below for complete changelog history.
 
+### 12/07/2021
+- Added custom ZEN icons.
+
 ### 23/04/2021
 - Implemented Majestic Iranian Kebab's collision fix (NOTE: Local player's character will no longer be hidden when in third person).
 

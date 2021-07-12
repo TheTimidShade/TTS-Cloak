@@ -13,7 +13,7 @@
 
 [] spawn {
 
-waitUntil {player == player && !isNull getAssignedCuratorLogic player};
+waitUntil {sleep 1; player == player && !isNull getAssignedCuratorLogic player};
 
 [] call tts_cloak_fnc_module_changeSettings;
 [] call tts_cloak_fnc_module_giveCloak;
