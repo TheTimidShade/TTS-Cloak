@@ -39,5 +39,5 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 				
 			}, {}, [_attachedObject] // args
 		] call zen_dialog_fnc_create;
-	}, "scripts\tts_cloak\icons\cloak_man.paa"] call zen_custom_modules_fnc_register;
+	}, "tts_cloak\icons\cloak_man.paa"] call zen_custom_modules_fnc_register;
 };
