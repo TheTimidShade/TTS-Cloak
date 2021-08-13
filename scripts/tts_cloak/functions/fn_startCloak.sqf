@@ -86,7 +86,7 @@ if (tts_cloak_playSounds) then {
 	[_source] spawn {sleep 10; deleteVehicle (_this#0);}; // wait and delete source
 };
 
-[_unit, false] remoteExec ["hideObject", -2, false]; // make the unit visible
+[_unit, false] remoteExec ["hideObject", 0, false]; // make the unit visible
 _unit setCaptive false; // allow AI targeting again
 
 // reset cloak timer and start cooldown

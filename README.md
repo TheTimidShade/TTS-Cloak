@@ -46,6 +46,9 @@ tts_cloak_useUIVehicle = true; // whether or not to show active camo UI (vehicle
 ## Changelog
 Read below for complete changelog history.
 
+### 13/08/2021
+- Fixed bug that caused cloaked players to remain invisible to the host player after uncloaking in locally hosted multiplayer games.
+
 ### 22/07/2021
 - 'Cloak Unit' ZEN module has been renamed to 'Cloak Unit(s)' and now has a second parameter that will apply the cloak effect to the unit's group if enabled.
 
