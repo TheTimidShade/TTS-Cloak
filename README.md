@@ -4,7 +4,11 @@ Source code for mod version of my Cloak/Active Camo Script.
 ## Changelog
 Read below for complete changelog history.
 
-### 22/07/2021
+### 13/08/2021
+Applied changes from script version:
+- Fixed bug that caused cloaked players to remain invisible to the host player after uncloaking in locally hosted multiplayer games.
+
+### 02/08/2021
 - Fixed missing icon for 'Cloak Unit(s)' module.
 
 ### 22/07/2021
