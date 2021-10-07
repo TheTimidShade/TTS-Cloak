@@ -97,12 +97,12 @@ class CfgVehicles {
 	};
 
 	class tts_cloak_moduleGiveCloak : tts_cloak_module {
-		scope = 2;
+		scope = 1;
 		scopeCurator = 0; // module is not available in Zeus
 		isDisposable = 1; // 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
 		isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
 		isTriggerActivated = 0;
-		displayName = "Give Cloak";
+		displayName = "Give Cloak (OLD)";
 		icon = "tts_cloak\icons\cloak_man.paa";
 		category = "tts_cloak_modules";
 		function = "tts_cloak_fnc_editor_moduleGiveCloak";
@@ -136,6 +136,41 @@ class CfgVehicles {
 		class ModuleDescription: ModuleDescription
 		{
 			description = "Gives units the ability to cloak.";
+		};
+	};
+
+	class tts_cloak_moduleGiveCloakV2 : tts_cloak_module {
+		scope = 2;
+		scopeCurator = 0; // module is not available in Zeus
+		isDisposable = 1; // 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
+		isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
+		isTriggerActivated = 0;
+		displayName = "Give Cloak";
+		icon = "tts_cloak\icons\cloak_man.paa";
+		category = "tts_cloak_modules";
+		function = "tts_cloak_fnc_editor_moduleGiveCloakV2";
+		
+		class Attributes : AttributesBase {
+			class Duration : Edit {
+				property = "tts_cloak_moduleGiveCloakV2_Duration";
+				displayName = "Cloak duration";
+				tooltip = "Maximum duration unit can remain cloaked before automatically uncloaking";
+				typeName = "NUMBER";
+				defaultValue = "30";
+			};
+			class Cooldown : Edit {
+				property = "tts_cloak_moduleGiveCloakV2_Cooldown";
+				displayName = "Cloak cooldown";
+				tooltip = "Cloak cooldown ";
+				typeName = "NUMBER";
+				defaultValue = "60";
+			};
+			class ModuleDescription: ModuleDescription{};
+		};
+
+		class ModuleDescription: ModuleDescription
+		{
+			description = "Gives player units the ability to cloak.";
 		};
 	};
 

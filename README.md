@@ -4,6 +4,9 @@ Source code for mod version of my Cloak/Active Camo Script.
 ## Changelog
 Read below for complete changelog history.
 
+### 07/10/2021
+- Updated 'Give Cloak' editor module to no longer require varnames of player units. Players can now simply be synced to the module. Old module included but hidden to avoid breaking any missions.
+
 ### 13/08/2021
 Applied changes from script version:
 - Fixed bug that caused cloaked players to remain invisible to the host player after uncloaking in locally hosted multiplayer games.

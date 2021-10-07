@@ -32,6 +32,7 @@ class tts_cloak
 		file = "tts_cloak\functions\editorModules";
 		class editor_moduleCloakSettings {};
 		class editor_moduleGiveCloak {};
+		class editor_moduleGiveCloakV2 {};
 		class editor_moduleGiveVehicleCloak {};
 	};
 };
