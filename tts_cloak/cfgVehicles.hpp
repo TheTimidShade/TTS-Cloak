@@ -35,6 +35,7 @@ class CfgVehicles {
 		icon = "tts_cloak\icons\tts_settings.paa";
 		category = "tts_cloak_modules";
 		function = "tts_cloak_fnc_editor_moduleCloakSettings";
+		functionPriority = 1;
 		
 		class Attributes : AttributesBase {
 			class Uniforms : Edit {
@@ -106,6 +107,7 @@ class CfgVehicles {
 		icon = "tts_cloak\icons\cloak_man.paa";
 		category = "tts_cloak_modules";
 		function = "tts_cloak_fnc_editor_moduleGiveCloak";
+		functionPriority = 2;
 		
 		class Attributes : AttributesBase {
 			class CloakUnits: Edit
@@ -149,6 +151,7 @@ class CfgVehicles {
 		icon = "tts_cloak\icons\cloak_man.paa";
 		category = "tts_cloak_modules";
 		function = "tts_cloak_fnc_editor_moduleGiveCloakV2";
+		functionPriority = 2;
 		
 		class Attributes : AttributesBase {
 			class Duration : Edit {
@@ -170,7 +173,20 @@ class CfgVehicles {
 
 		class ModuleDescription: ModuleDescription
 		{
-			description = "Gives player units the ability to cloak.";
+			description = "Gives synced player units cloak ability.";
+			sync[] = {"CAManBase"};
+
+			class AnyPlayer
+			{
+				description[] = {
+					"Gives cloak ability to synced player"
+				};
+				position = 0;
+				direction = 0; 
+				optional = 0; 
+				duplicate = 0;
+				synced[] = {"CAManBase"};
+			};
 		};
 	};
 
@@ -184,6 +200,7 @@ class CfgVehicles {
 		category = "tts_cloak_modules";
 		icon = "tts_cloak\icons\cloak_vehicle.paa";
 		function = "tts_cloak_fnc_editor_moduleGiveVehicleCloak";
+		functionPriority = 2;
 		
 		class Attributes : AttributesBase {
 			class Identifier: Edit
@@ -208,7 +225,7 @@ class CfgVehicles {
 				typeName = "NUMBER";
 				defaultValue = "60";
 			};
-			class ModuleDescription: ModuleDescription{};
+			class ModuleDescription: ModuleDescription {};
 		};
 
 		class ModuleDescription: ModuleDescription

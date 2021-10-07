@@ -20,6 +20,7 @@ params [
 ];
 
 if (!isServer) exitWith {};
+if (isClass(configFile >> "CfgPatches" >> "tts_effects_aio") && {missionNamespace getVariable ["tts_effects_aio_disable_cloak", false]}) exitWith {};
 
 if (_activated) then {
 

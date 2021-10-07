@@ -20,6 +20,7 @@
 private _unitList = missionNamespace getVariable ["tts_cloak_moduleCloakList", []];
 
 if (!hasInterface) exitWith {}; // only run on clients
+if (isClass(configFile >> "CfgPatches" >> "tts_effects_aio") && {missionNamespace getVariable ["tts_effects_aio_disable_cloak", false]}) exitWith {};
 
 {
 	_x params ["_varName", "_duration", "_cooldown"];
