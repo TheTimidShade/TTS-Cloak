@@ -12,7 +12,7 @@ A [mod version](https://steamcommunity.com/sharedfiles/filedetails/?id=254477819
 - Vehicle active camouflage (Thanks to Twiznak)
 - Designed for multiplayer and tested on dedicated server
 - Compatible with Zeus Enhanced
-- Editor modules to simplify usage (Mod version only!)
+- Editor modules to simplify usage (*Mod version only!*)
 
 [Zeus Enhanced](https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631) is required to use the module from Zeus.
 
