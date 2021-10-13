@@ -67,6 +67,17 @@ Alternatively, if you are using Zeus Enhanced you can do this via Zeus modules.
 ___
 
 ### **SETTINGS:**
+Default settings:
+```sqf
+tts_cloak_uniforms = ["U_O_CombatUniform_oucamo"];
+tts_cloak_headgear = ["H_HelmetLeaderO_oucamo"];
+tts_cloak_requireHolstered = true;
+tts_cloak_decloakOnFired = true;
+tts_cloak_playSounds = true;
+tts_cloak_playVoice = true;
+tts_cloak_useUI = true;
+tts_cloak_useUIVehicle = true;
+```
 **tts_cloak_uniforms/tts_cloak_headgear**  
 An array of uniform/headgear classnames. In order to cloak, a player unit must be wearing one of the uniforms/headgear in the array AND been granted the ability to cloak via `tts_cloak_fnc_giveCloak`. If the array contains the empty string (""), that piece of equipment is not required.  
 e.g.
