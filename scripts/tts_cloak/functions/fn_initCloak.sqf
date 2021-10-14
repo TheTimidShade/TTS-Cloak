@@ -16,6 +16,8 @@
 
 [] spawn {
 
+if (isClass(configFile >> "CfgPatches" >> "tts_effects_aio") && {missionNamespace getVariable ["tts_effects_aio_disable_cloak", false]}) exitWith {};
+
 // set up settings if they are undefined
 if (isNil "tts_cloak_uniforms") then {tts_cloak_uniforms = [""];};
 if (isNil "tts_cloak_headgear") then {tts_cloak_headgear = [""];};
