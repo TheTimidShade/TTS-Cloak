@@ -1,17 +1,17 @@
 // ZEUS ENHANCED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
-	["TTS Cloaking", "Cloak Unit(s)",
+	["TTS Cloak", "STR_tts_cloak_moduleCloakUnits_title",
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_attachedObject", objNull, [objNull]]];
 
 		if (isNull _attachedObject || !(_attachedObject isKindOf "CAManBase")) exitWith {
-			["Must be placed on a unit!"] call zen_common_fnc_showMessage;
+			["STR_tts_cloak_moduleCloakUnits_placeOnUnit"] call zen_common_fnc_showMessage;
 		};
 
 		[
-			"Cloak Unit(s)", // title
+			"STR_tts_cloak_moduleCloakUnits_title", // title
 		 	[ // array of controls for dialog
-				["EDIT", ["Cloak duration", "Time in seconds to cloak unit for"],
+				["EDIT", ["STR_tts_cloak_moduleCloakUnits_duration", "STR_tts_cloak_moduleCloakUnits_duration_desc"],
 					[ // control args
 						str 30, // default text
 						{}, // sanitise function
@@ -19,7 +19,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					],
 					false // force default
 				],
-				["CHECKBOX", ["Apply to group", "If checked, all members in the unit's group will be cloaked"],
+				["CHECKBOX", ["STR_tts_cloak_moduleCloakUnits_applyToGroup", "STR_tts_cloak_moduleCloakUnits_applyToGroup_desc"],
 					[ // control args
 						false // default state
 					]

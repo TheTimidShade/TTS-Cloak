@@ -1,17 +1,17 @@
 // ZEUS ENHANCED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
-	["TTS Cloaking", "Give Active Camouflage",
+	["TTS Cloak", "STR_tts_cloak_moduleGiveVehicleCloak_title",
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_attachedObject", objNull, [objNull]]];
 
 		if (isNull _attachedObject || !(_attachedObject isKindOf "AllVehicles") || _attachedObject isKindOf "CAManBase") exitWith {
-			["Must be placed on a vehicle!"] call zen_common_fnc_showMessage;
+			["STR_tts_cloak_moduleGiveVehicleCloak_placeOnVehicle"] call zen_common_fnc_showMessage;
 		};
 
 		[
-			"Give Active Camouflage", // title
+			"STR_tts_cloak_moduleGiveVehicleCloak_title", // title
 		 	[ // array of controls for dialog
-				["EDIT", ["Unique identifier", "Unique identifier used by script to handle PIP textures"],
+				["EDIT", ["STR_tts_cloak_moduleGiveVehicleCloak_identifier", "STR_tts_cloak_moduleGiveVehicleCloak_identifier_desc"],
 					[ // control args
 						"", // default text
 						{}, // sanitise function
@@ -19,7 +19,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					],
 					true // force default
 				],
-				["EDIT", ["Camo max duration", "Maximum time vehicle can use active camo before automatic deactivation"],
+				["EDIT", ["STR_tts_cloak_moduleGiveVehicleCloak_maxDuration", "STR_tts_cloak_moduleGiveVehicleCloak_maxDuration_desc"],
 					[ // control args
 						str 120, // default text
 						{}, // sanitise function
@@ -27,7 +27,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					],
 					false // force default
 				],
-				["EDIT", ["Camo cooldown", "Cooldown period required after vehicle deactivates camouflage before it can be used again"],
+				["EDIT", ["STR_tts_cloak_moduleGiveVehicleCloak_cooldown", "STR_tts_cloak_moduleGiveVehicleCloak_cooldown_desc"],
 					[ // control args
 						str 300, // default text
 						{}, // sanitise function
@@ -41,7 +41,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 				_args params ["_attachedObject"];
 				
 				if (_dialogResult#0 == "") exitWith {
-					["Identifier must be unique, non-empty string!"] call zen_common_fnc_showMessage;
+					["STR_tts_cloak_moduleGiveVehicleCloak_identifier_warning"] call zen_common_fnc_showMessage;
 				};
 
 				[_attachedObject, (_dialogResult#0), parseNumber (_dialogResult#1), parseNumber (_dialogResult#2)] remoteExec ["tts_cloak_fnc_giveVehicleCloak", 2, false];

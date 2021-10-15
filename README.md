@@ -51,8 +51,9 @@ class CfgFunctions
     #include "scripts\tts_beam\cfgFunctions.hpp"
 }
 ```
-6. Set up the settings in your `init.sqf` file how you would like (more info on individual settings below)
-7. Done! You can now grant a player unit the ability to cloak using 
+6. If you do not already have a `stringtable.xml` file in your mission, copy it into your mission folder. If you already have one, copy everything EXCEPT THE FIRST LINE from my `stringtable.xml` into yours.
+7. Set up the settings in your `init.sqf` file how you would like (more info on individual settings below)
+8. Done! You can now grant a player unit the ability to cloak using 
 ```sqf
 [unit, maxDuration, cooldown] spawn tts_cloak_fnc_giveCloak;
 ```
@@ -194,6 +195,10 @@ ___
 
 ## Changelog
 Read below for complete changelog history.
+
+### 13/10/2021
+- Added stringtable support to allow the script to be translated. If you are willing to help translate the script into another language, contact me in my Discord!
+- Added 2 new functions, `fn_addCloakActions` and `fn_addVehicleCloakActions`. These are executed locally on players to allow localisation of the action text.
 
 ### 13/10/2021
 - Cleaned up README file, improved instructions, added some more examples and documentation for the different functions.

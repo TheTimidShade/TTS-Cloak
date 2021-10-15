@@ -18,6 +18,8 @@ class tts_cloak
 		class setupPIPcamera {};
 		class updateCloakDisplayVehicle {};
 		class vehicleCloakEffect {};
+		class addCloakActions {};
+		class addVehicleCloakActions {};
 	};
 	class modules {
 		file = "scripts\tts_cloak\functions\modules";
