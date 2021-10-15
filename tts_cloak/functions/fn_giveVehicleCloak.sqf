@@ -54,34 +54,7 @@ private _JIPmessageID = format ["%1_pipSetup", _identifier];
 if (_vehicle getVariable ["tts_cloak_hasActions",false]) exitWith {}; // don't add actions if vehicle already has them
 
 // set up actions
-_JIPmessageID = format ["%1_activateAction", _identifier];
-[_vehicle, ["<t color='#00d615'>Activate vehicle camo</t>", {
-	params ["_target", "_caller", "_actionId", "_arguments"];
-	_arguments params ["_identifier"];
-
-	[_target, _identifier] spawn tts_cloak_fnc_startVehicleCloak;
-},
-[_identifier], 6, false, true, "", "alive _target && (driver _target == player || commander _target == player || gunner _target == player) && !(_target getVariable ['tts_cloak_isCloaked',false]) && _target getVariable ['tts_cloak_cooldown',false] <= 0 && (_target getVariable ['tts_cloak_vehicleHasCloak',false])", 10, false]] remoteExec ["addAction", 0, _JIPmessageID];
-
-_JIPmessageID = format ["%1_deactivateAction", _identifier];
-[_vehicle, ["<t color='#ff0000'>Deactivate camo</t>", {
-	params ["_target", "_caller", "_actionId", "_arguments"];
-
-	_target setVariable ["tts_cloak_isCloaked", false, true];
-},
-[], 6, false, true, "", "alive _target && (driver _target == player || commander _target == player || gunner _target == player) && (_target getVariable ['tts_cloak_isCloaked',false])", 10, false]] remoteExec ["addAction", 0, _JIPmessageID];
-
-_JIPmessageID = format ["%1_toggleDispAction", _identifier];
-[_vehicle, ["<t color='#f5a442'>Toggle camo display</t>", {
-	params ["_target", "_caller", "_actionId", "_arguments"];
-
-	if (tts_cloak_showDisplayVehicle) then {
-		tts_cloak_showDisplayVehicle = false;
-	} else {
-		tts_cloak_showDisplayVehicle = true;
-		[] spawn tts_cloak_fnc_updateCloakDisplayVehicle;
-	};
-},
-[], 6, false, true, "", "tts_cloak_useUIVehicle && alive _target && (driver _target == player || commander _target == player || gunner _target == player) && (_target getVariable ['tts_cloak_vehicleHasCloak',false])", 0, false]] remoteExec ["addAction", 0, _JIPmessageID];
+_JIPmessageID = format ["%1_cloak_actions", _identifier];
+[_vehicle, _identifier] remoteExec ["tts_cloak_fnc_addVehicleCloakActions", 0, _JIPmessageID];
 
 _vehicle setVariable ["tts_cloak_hasActions",true, true];

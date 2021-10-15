@@ -1,6 +1,14 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 15/10/2021
+Applied changes from script version:  
+- Added stringtable support to allow the script to be translated. If you are willing to help translate the script into another language, contact me in my Discord!
+- Added 2 new functions, `fn_addCloakActions` and `fn_addVehicleCloakActions`. These are executed locally on players to allow localisation of the action text.
+
+Mod version specific changes:
+- Renamed 'Give Vehicle Cloak' editor module to 'Give Active Camouflage' for consistency.  
+
 ### 07/10/2021
 - Updated 'Give Cloak' editor module to no longer require varnames of player units. Players can now simply be synced to the module. Old module included but hidden to avoid breaking any missions.
 - Adjusted module descriptions.

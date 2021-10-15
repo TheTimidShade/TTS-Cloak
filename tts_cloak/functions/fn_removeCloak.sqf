@@ -36,4 +36,5 @@ if (_unit isKindOf "CAManBase") then {
 	private _identifier = _unit getVariable ["tts_cloak_vehicleIdentifier", ""];
 	
 	remoteExec ["", format ["%1_pipSetup", _identifier]]; // clear pip setup from JIP queue
+	remoteExec ["", format ["%1_cloak_actions", _identifier]]; // clear actions from JIP queue
 };

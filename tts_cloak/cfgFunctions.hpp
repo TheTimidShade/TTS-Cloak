@@ -19,6 +19,8 @@ class tts_cloak
 		class updateCloakDisplayVehicle {};
 		class vehicleCloakEffect {};
 		class setupModuleCloaks {postInit = 1;};
+		class addCloakActions {};
+		class addVehicleCloakActions {};
 	};
 	class modules {
 		file = "tts_cloak\functions\modules";

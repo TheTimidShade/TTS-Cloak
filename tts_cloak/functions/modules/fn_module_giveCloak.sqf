@@ -1,17 +1,17 @@
 // ZEUS ENHANCED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
-	["TTS Cloaking", "Give Cloak",
+	["TTS Cloak", "STR_tts_cloak_moduleGiveCloak_title",
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_attachedObject", objNull, [objNull]]];
 
 		if (isNull _attachedObject || !isPlayer _attachedObject) exitWith {
-			["Must be placed on a player unit!"] call zen_common_fnc_showMessage;
+			["STR_tts_cloak_moduleGiveCloak_placeOnPlayer"] call zen_common_fnc_showMessage;
 		};
 
 		[
-			"Give Unit Cloak", // title
+			"STR_tts_cloak_moduleGiveCloak_title", // title
 		 	[ // array of controls for dialog
-				["EDIT", ["Cloak max duration", "Maximum time unit can be cloaked before uncloaking"],
+				["EDIT", ["STR_tts_cloak_moduleGiveCloak_maxDuration", "STR_tts_cloak_moduleGiveCloak_maxDuration_desc"],
 					[ // control args
 						str 30, // default text
 						{}, // sanitise function
@@ -19,7 +19,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					],
 					false // force default
 				],
-				["EDIT", ["Cloak cooldown", "Cooldown period required after uncloak before unit can cloak again"],
+				["EDIT", ["STR_tts_cloak_moduleGiveCloak_cooldown", "STR_tts_cloak_moduleGiveCloak_cooldown_desc"],
 					[ // control args
 						str 60, // default text
 						{}, // sanitise function

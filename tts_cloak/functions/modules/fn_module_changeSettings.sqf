@@ -1,6 +1,6 @@
 // ZEUS ENHANCED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
-	["TTS Cloaking", "Change Settings",
+	["TTS Cloak", "STR_tts_cloak_moduleChangeSettings_title",
 	{
 		params [["_position", [0,0,0], [[]], 3], ["_attachedObject", objNull, [objNull]]];
 
@@ -15,9 +15,9 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 		if (isNil "tts_cloak_useUIVehicle") then {tts_cloak_useUIVehicle = true;};
 
 		[
-			"Configure Cloak Settings", // title
+			"STR_tts_cloak_moduleChangeSettings_heading", // title
 		 	[ // array of controls for dialog
-				["EDIT", ["Cloak uniforms", "Uniforms considered 'cloaking' uniforms"],
+				["EDIT", ["STR_tts_cloak_moduleChangeSettings_uniform", "STR_tts_cloak_moduleChangeSettings_uniform_desc"],
 					[ // control args
 						str tts_cloak_uniforms, // default text
 						{}, // sanitise function
@@ -25,7 +25,7 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					],
 					true // force default
 				],
-				["EDIT", ["Cloak headgear", "Headgear considered 'cloaking' headgear"],
+				["EDIT", ["STR_tts_cloak_moduleChangeSettings_headgear", "STR_tts_cloak_moduleChangeSettings_headgear_desc"],
 					[ // control args
 						str tts_cloak_headgear, // default text
 						{}, // sanitise function
@@ -33,45 +33,45 @@ if (isClass (configFile >> "CfgPatches" >> "zen_main")) then {
 					],
 					true // force default
 				],
-				["COMBO", ["Require holstered", "Does the player need to put their gun away to cloak?"],
+				["COMBO", ["STR_tts_cloak_moduleChangeSettings_requireHolstered", "STR_tts_cloak_moduleChangeSettings_requireHolstered_desc"],
 					[ // control args
 						[true, false], // return values
-						["True", "False"], // labels
+						["STR_tts_cloak_true", "STR_tts_cloak_false"], // labels
 						0 // element 0 is default selected
 					]
 				],
-				["COMBO", ["Decloak when firing", "Does the cloak automatically shut down when a weapon is used?"],
+				["COMBO", ["STR_tts_cloak_moduleChangeSettings_decloakOnFire", "STR_tts_cloak_moduleChangeSettings_decloakOnFire_desc"],
 					[ // control args
 						[true, false], // return values
-						["True", "False"], // labels
+						["STR_tts_cloak_true", "STR_tts_cloak_false"], // labels
 						0 // element 0 is default selected
 					]
 				],
-				["COMBO", ["Play sounds", "Should cloak in/out sound effects be used?"],
+				["COMBO", ["STR_tts_cloak_moduleChangeSettings_playSounds", "STR_tts_cloak_moduleChangeSettings_playSounds_desc"],
 					[ // control args
 						[true, false], // return values
-						["True", "False"], // labels
+						["STR_tts_cloak_true", "STR_tts_cloak_false"], // labels
 						0 // element 0 is default selected
 					]
 				],
-				["COMBO", ["Play voice", "Should 'cloak engaged' voice play on entering cloak?"],
+				["COMBO", ["STR_tts_cloak_moduleChangeSettings_playVoice", "STR_tts_cloak_moduleChangeSettings_playVoice_desc"],
 					[ // control args
 						[true, false], // return values
-						["True", "False"], // labels
+						["STR_tts_cloak_true", "STR_tts_cloak_false"], // labels
 						0 // element 0 is default selected
 					]
 				],
-				["COMBO", ["Use UI", "Should the cloak UI be available to players?"],
+				["COMBO", ["STR_tts_cloak_moduleChangeSettings_useUI", "STR_tts_cloak_moduleChangeSettings_useUI_desc"],
 					[ // control args
 						[true, false], // return values
-						["True", "False"], // labels
+						["STR_tts_cloak_true", "STR_tts_cloak_false"], // labels
 						0 // element 0 is default selected
 					]
 				],
-				["COMBO", ["Use vehicle UI", "Should the active camo UI be available to players?"],
+				["COMBO", ["STR_tts_cloak_moduleChangeSettings_useVehicleUI", "STR_tts_cloak_moduleChangeSettings_useVehicleUI_desc"],
 					[ // control args
 						[true, false], // return values
-						["True", "False"], // labels
+						["STR_tts_cloak_true", "STR_tts_cloak_false"], // labels
 						0 // element 0 is default selected
 					]
 				]

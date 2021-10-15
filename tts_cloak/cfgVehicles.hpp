@@ -31,7 +31,7 @@ class CfgVehicles {
 		isDisposable = 1; // 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
 		isGlobal = 1; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
 		isTriggerActivated = 0;
-		displayName = "Cloak Settings";
+		displayName = "$STR_tts_cloak_moduleChangeSettings_title_alt";
 		icon = "tts_cloak\icons\tts_settings.paa";
 		category = "tts_cloak_modules";
 		function = "tts_cloak_fnc_editor_moduleCloakSettings";
@@ -40,52 +40,52 @@ class CfgVehicles {
 		class Attributes : AttributesBase {
 			class Uniforms : Edit {
 				property = "tts_cloak_moduleCloakSettings_Uniforms";
-				displayName = "Cloak uniforms";
-				tooltip = "Uniforms considered 'cloaking' uniforms seperated by commas (without spaces)";
+				displayName = "$STR_tts_cloak_moduleChangeSettings_uniform";
+				tooltip = "$STR_tts_cloak_moduleChangeSettings_uniform_desc";
 				typeName = "STRING";
 				defaultValue = """""";
 			};
 			class Headgear : Edit {
 				property = "tts_cloak_moduleCloakSettings_Headgear";
-				displayName = "Cloak headgear";
-				tooltip = "Headgear considered 'cloaking' headgear seperated by commas (without spaces)";
+				displayName = "$STR_tts_cloak_moduleChangeSettings_headgear";
+				tooltip = "$STR_tts_cloak_moduleChangeSettings_headgear_desc";
 				typeName = "STRING";
 				defaultValue = """""";
 			};
 			class RequireHolstered : Checkbox {
 				property = "tts_cloak_moduleCloakSettings_RequireHolstered";
-				displayName = "Require holstered";
-				tooltip = "Does the player need to put their gun away to cloak?";
+				displayName = "$STR_tts_cloak_moduleChangeSettings_requireHolstered";
+				tooltip = "$STR_tts_cloak_moduleChangeSettings_requireHolstered_desc";
 				defaultValue = "1";
 			};
 			class DecloakOnFired : Checkbox {
 				property = "tts_cloak_moduleCloakSettings_DecloakOnFired";
-				displayName = "Decloak when firing";
-				tooltip = "Does the cloak automatically shut down when a weapon is used?";
+				displayName = "$STR_tts_cloak_moduleChangeSettings_decloakOnFire";
+				tooltip = "$STR_tts_cloak_moduleChangeSettings_decloakOnFire_desc";
 				defaultValue = "1";
 			};
 			class PlaySounds : Checkbox {
 				property = "tts_cloak_moduleCloakSettings_PlaySounds";
-				displayName = "Play sounds";
-				tooltip = "Should cloak in/out sound effects be used?";
+				displayName = "$STR_tts_cloak_moduleChangeSettings_playSounds";
+				tooltip = "$STR_tts_cloak_moduleChangeSettings_playSounds_desc";
 				defaultValue = "1";
 			};
 			class PlayVoice : Checkbox {
 				property = "tts_cloak_moduleCloakSettings_PlayVoice";
-				displayName = "Play voice";
-				tooltip = "Should 'cloak engaged' voice play on entering cloak?";
+				displayName = "$STR_tts_cloak_moduleChangeSettings_playVoice";
+				tooltip = "$STR_tts_cloak_moduleChangeSettings_playVoice_desc";
 				defaultValue = "1";
 			};
 			class UseUI : Checkbox {
 				property = "tts_cloak_moduleCloakSettings_UseUI";
-				displayName = "Use UI";
-				tooltip = "Should the cloak UI be available to players?";
+				displayName = "$STR_tts_cloak_moduleChangeSettings_useUI";
+				tooltip = "$STR_tts_cloak_moduleChangeSettings_useUI_desc";
 				defaultValue = "1";
 			};
 			class UseVehicleUI : Checkbox {
 				property = "tts_cloak_moduleCloakSettings_UseVehicleUI";
-				displayName = "Use vehicle UI";
-				tooltip = "Should the active camo UI be available to players?";
+				displayName = "$STR_tts_cloak_moduleChangeSettings_useVehicleUI";
+				tooltip = "$STR_tts_cloak_moduleChangeSettings_useVehicleUI_desc";
 				defaultValue = "1";
 			};
 			class ModuleDescription: ModuleDescription{};
@@ -93,7 +93,7 @@ class CfgVehicles {
 
 		class ModuleDescription: ModuleDescription
 		{
-			description = "Configures settings for TTS Cloak script."; // Short description, will be formatted as structured text
+			description = "$STR_tts_cloak_moduleChangeSettings_desc"; // Short description, will be formatted as structured text
 		};
 	};
 
@@ -147,7 +147,7 @@ class CfgVehicles {
 		isDisposable = 1; // 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
 		isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
 		isTriggerActivated = 0;
-		displayName = "Give Cloak";
+		displayName = "$STR_tts_cloak_moduleGiveCloak_title";
 		icon = "tts_cloak\icons\cloak_man.paa";
 		category = "tts_cloak_modules";
 		function = "tts_cloak_fnc_editor_moduleGiveCloakV2";
@@ -156,15 +156,15 @@ class CfgVehicles {
 		class Attributes : AttributesBase {
 			class Duration : Edit {
 				property = "tts_cloak_moduleGiveCloakV2_Duration";
-				displayName = "Cloak duration";
-				tooltip = "Maximum duration unit can remain cloaked before automatically uncloaking";
+				displayName = "$STR_tts_cloak_moduleGiveCloak_maxDuration";
+				tooltip = "$STR_tts_cloak_moduleGiveCloak_maxDuration_desc";
 				typeName = "NUMBER";
 				defaultValue = "30";
 			};
 			class Cooldown : Edit {
 				property = "tts_cloak_moduleGiveCloakV2_Cooldown";
-				displayName = "Cloak cooldown";
-				tooltip = "Cloak cooldown ";
+				displayName = "$STR_tts_cloak_moduleGiveCloak_cooldown";
+				tooltip = "$STR_tts_cloak_moduleGiveCloak_cooldown_desc";
 				typeName = "NUMBER";
 				defaultValue = "60";
 			};
@@ -173,20 +173,7 @@ class CfgVehicles {
 
 		class ModuleDescription: ModuleDescription
 		{
-			description = "Gives synced player units cloak ability.";
-			sync[] = {"CAManBase"};
-
-			class AnyPlayer
-			{
-				description[] = {
-					"Gives cloak ability to synced player"
-				};
-				position = 0;
-				direction = 0; 
-				optional = 0; 
-				duplicate = 0;
-				synced[] = {"CAManBase"};
-			};
+			description = "$STR_tts_cloak_moduleGiveCloak_desc";
 		};
 	};
 
@@ -196,7 +183,7 @@ class CfgVehicles {
 		isDisposable = 1; // 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
 		isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
 		isTriggerActivated = 0;
-		displayName = "Give Vehicle Cloak";
+		displayName = "$STR_tts_cloak_moduleGiveVehicleCloak_title";
 		category = "tts_cloak_modules";
 		icon = "tts_cloak\icons\cloak_vehicle.paa";
 		function = "tts_cloak_fnc_editor_moduleGiveVehicleCloak";
@@ -206,22 +193,22 @@ class CfgVehicles {
 			class Identifier: Edit
 			{
 				property = "tts_cloak_moduleGiveVehicleCloak_Identifier";
-				displayName = "Unique Identifier";
-				tooltip = "Unique string used to manage PIP textures, having 2 cloak vehicles with the same identifier may cause strange behaviour";
+				displayName = "$STR_tts_cloak_moduleGiveVehicleCloak_identifier";
+				tooltip = "$STR_tts_cloak_moduleGiveVehicleCloak_identifier_desc";
 				typeName = "STRING";
 				defaultValue = """uniqueString""";
 			};
 			class Duration : Edit {
 				property = "tts_cloak_moduleGiveVehicleCloak_Duration";
-				displayName = "Cloak duration";
-				tooltip = "Maximum duration vehicle can remain cloaked before automatically uncloaking";
+				displayName = "$STR_tts_cloak_moduleGiveVehicleCloak_maxDuration";
+				tooltip = "$STR_tts_cloak_moduleGiveVehicleCloak_maxDuration_desc";
 				typeName = "NUMBER";
 				defaultValue = "30";
 			};
 			class Cooldown : Edit {
 				property = "tts_cloak_moduleGiveVehicleCloak_Cooldown";
-				displayName = "Cloak cooldown";
-				tooltip = "Cloak cooldown ";
+				displayName = "$STR_tts_cloak_moduleGiveVehicleCloak_cooldown";
+				tooltip = "$STR_tts_cloak_moduleGiveVehicleCloak_cooldown_desc";
 				typeName = "NUMBER";
 				defaultValue = "60";
 			};
@@ -230,20 +217,7 @@ class CfgVehicles {
 
 		class ModuleDescription: ModuleDescription
 		{
-			description = "Gives vehicle the ability to cloak. Only one vehicle can be synced per module."; // Short description, will be formatted as structured text
-			sync[] = {"AllVehicles"};
-
-			class AnyVehicle
-			{
-				description[] = {
-					"Vehicle cloak is assigned to"
-				};
-				position = 0;
-				direction = 0; 
-				optional = 0; 
-				duplicate = 0;
-				synced[] = {"AnyVehicle"};
-			};
+			description = "$STR_tts_cloak_moduleGiveVehicleCloak_desc"; // Short description, will be formatted as structured text
 		};
 	};
 
