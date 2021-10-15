@@ -46,6 +46,10 @@
 				<Original>Change Settings</Original>
 				<English>Change Settings</English>
 			</Key>
+            <Key ID="STR_tts_cloak_moduleChangeSettings_title_alt">
+				<Original>Cloak Settings</Original>
+				<English>Cloak Settings</English>
+			</Key>
             <Key ID="STR_tts_cloak_moduleChangeSettings_desc">
 				<Original>Configures settings for TTS Cloak script.</Original>
 				<English>Configures settings for TTS Cloak script.</English>
@@ -60,8 +64,8 @@
                     <English>Cloak uniforms</English>
                 </Key>
                 <Key ID="STR_tts_cloak_moduleChangeSettings_uniform_desc">
-                    <Original>Uniforms considered 'cloaking' uniforms seperated by commas (without spaces)</Original>
-                    <English>Uniforms considered 'cloaking' uniforms seperated by commas (without spaces)</English>
+                    <Original>Uniforms considered 'cloaking' uniforms seperated by commas</Original>
+                    <English>Uniforms considered 'cloaking' uniforms seperated by commas</English>
                 </Key>
             </Container>
             <Container name="Cloak headgear param">
@@ -70,8 +74,8 @@
                     <English>Cloak headgear</English>
                 </Key>
                 <Key ID="STR_tts_cloak_moduleChangeSettings_headgear_desc">
-                    <Original>Headgear considered 'cloaking' headgear seperated by commas (without spaces)</Original>
-                    <English>Headgear considered 'cloaking' headgear seperated by commas (without spaces)</English>
+                    <Original>Headgear considered 'cloaking' headgear seperated by commas</Original>
+                    <English>Headgear considered 'cloaking' headgear seperated by commas</English>
                 </Key>
             </Container>
             <Container name="Require holstered param">
