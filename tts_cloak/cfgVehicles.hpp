@@ -145,7 +145,7 @@ class CfgVehicles {
 		scope = 2;
 		scopeCurator = 0; // module is not available in Zeus
 		isDisposable = 1; // 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
-		isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
+		isGlobal = 2; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
 		isTriggerActivated = 0;
 		displayName = "$STR_tts_cloak_moduleGiveCloak_title";
 		icon = "tts_cloak\icons\cloak_man.paa";

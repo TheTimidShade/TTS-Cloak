@@ -1,6 +1,9 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 16/10/2021
+- Fixed typo in newer 'Give Cloak' editor module which was preventing the cloak from being added in multiplayer.
+
 ### 15/10/2021
 Applied changes from script version:  
 - Added stringtable support to allow the script to be translated. If you are willing to help translate the script into another language, contact me in my Discord!
