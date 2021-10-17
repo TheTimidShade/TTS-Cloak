@@ -1,6 +1,9 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 17/10/2021
+- Reverted to older 'Give Cloak' editor module for now since there still seems to be problems with the new module in multiplayer.
+
 ### 16/10/2021
 - Fixed typo in newer 'Give Cloak' editor module which was preventing the cloak from being added in multiplayer.
 
