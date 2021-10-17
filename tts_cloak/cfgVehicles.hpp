@@ -98,12 +98,12 @@ class CfgVehicles {
 	};
 
 	class tts_cloak_moduleGiveCloak : tts_cloak_module {
-		scope = 2;
+		scope = 1;
 		scopeCurator = 0; // module is not available in Zeus
 		isDisposable = 1; // 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
 		isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
 		isTriggerActivated = 0;
-		displayName = "Give Cloak";
+		displayName = "Give Cloak (OLD)";
 		icon = "tts_cloak\icons\cloak_man.paa";
 		category = "tts_cloak_modules";
 		function = "tts_cloak_fnc_editor_moduleGiveCloak";
@@ -142,12 +142,12 @@ class CfgVehicles {
 	};
 
 	class tts_cloak_moduleGiveCloakV2 : tts_cloak_module {
-		scope = 1;
+		scope = 2;
 		scopeCurator = 0; // module is not available in Zeus
 		isDisposable = 1; // 1 if modules is to be disabled once it's activated (i.e., repeated trigger activation won't work)
 		isGlobal = 2; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
 		isTriggerActivated = 0;
-		displayName = "Give Cloak (BROKEN)";
+		displayName = "$STR_tts_cloak_moduleGiveCloak_title";
 		icon = "tts_cloak\icons\cloak_man.paa";
 		category = "tts_cloak_modules";
 		function = "tts_cloak_fnc_editor_moduleGiveCloakV2";

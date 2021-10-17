@@ -19,16 +19,12 @@ params [
 	["_activated", true, [true]]
 ];
 
-if (!isServer) exitWith {};
 if (isClass(configFile >> "CfgPatches" >> "tts_effects_aio") && {missionNamespace getVariable ["tts_effects_aio_disable_cloak", false]}) exitWith {};
 
 if (_activated) then {
 	// get values from module
 	private _cloakDuration = _module getVariable ["Duration", 30];
 	private _cloakCooldown = _module getVariable ["Cooldown", 60];
-
-	// retrieve current module list if it exists
-	private _tmpList = missionNamespace getVariable ["tts_cloak_moduleCloakList", []];
 
 	if (player in _units) then
 	{
