@@ -1,6 +1,9 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 07/11/2021
+- Fixed default settings for modules having incorrect types. Modules should not cause errors when using default settings anymore.
+
 ### 17/10/2021
 - ~~Reverted to older 'Give Cloak' editor module for now since there still seems to be problems with the new module in multiplayer.~~
 - New 'Give Cloak' module has been fixed properly and confirmed working on a dedicated server.

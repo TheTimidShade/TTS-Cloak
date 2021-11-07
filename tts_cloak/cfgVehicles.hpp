@@ -56,37 +56,43 @@ class CfgVehicles {
 				property = "tts_cloak_moduleCloakSettings_RequireHolstered";
 				displayName = "$STR_tts_cloak_moduleChangeSettings_requireHolstered";
 				tooltip = "$STR_tts_cloak_moduleChangeSettings_requireHolstered_desc";
-				defaultValue = "1";
+				typeName = "BOOL";
+				defaultValue = "true";
 			};
 			class DecloakOnFired : Checkbox {
 				property = "tts_cloak_moduleCloakSettings_DecloakOnFired";
 				displayName = "$STR_tts_cloak_moduleChangeSettings_decloakOnFire";
 				tooltip = "$STR_tts_cloak_moduleChangeSettings_decloakOnFire_desc";
-				defaultValue = "1";
+				typeName = "BOOL";
+				defaultValue = "true";
 			};
 			class PlaySounds : Checkbox {
 				property = "tts_cloak_moduleCloakSettings_PlaySounds";
 				displayName = "$STR_tts_cloak_moduleChangeSettings_playSounds";
 				tooltip = "$STR_tts_cloak_moduleChangeSettings_playSounds_desc";
-				defaultValue = "1";
+				typeName = "BOOL";
+				defaultValue = "true";
 			};
 			class PlayVoice : Checkbox {
 				property = "tts_cloak_moduleCloakSettings_PlayVoice";
 				displayName = "$STR_tts_cloak_moduleChangeSettings_playVoice";
 				tooltip = "$STR_tts_cloak_moduleChangeSettings_playVoice_desc";
-				defaultValue = "1";
+				typeName = "BOOL";
+				defaultValue = "true";
 			};
 			class UseUI : Checkbox {
 				property = "tts_cloak_moduleCloakSettings_UseUI";
 				displayName = "$STR_tts_cloak_moduleChangeSettings_useUI";
 				tooltip = "$STR_tts_cloak_moduleChangeSettings_useUI_desc";
-				defaultValue = "1";
+				typeName = "BOOL";
+				defaultValue = "true";
 			};
 			class UseVehicleUI : Checkbox {
 				property = "tts_cloak_moduleCloakSettings_UseVehicleUI";
 				displayName = "$STR_tts_cloak_moduleChangeSettings_useVehicleUI";
 				tooltip = "$STR_tts_cloak_moduleChangeSettings_useVehicleUI_desc";
-				defaultValue = "1";
+				typeName = "BOOL";
+				defaultValue = "true";
 			};
 			class ModuleDescription: ModuleDescription{};
 		};
