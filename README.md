@@ -5,12 +5,13 @@ A [mod version](https://steamcommunity.com/sharedfiles/filedetails/?id=254477819
 
 ### **FEATURES:**
 - Configurable settings so you can use the script how you like
-- Small display to keep track of cloak status
+- Display to keep track of cloak status
 - Cloak activation/deactivation sounds
 - AI will not detect cloaked units
 - Can cloak AI units
 - Vehicle active camouflage (Thanks to Twiznak)
 - Designed for multiplayer and tested on dedicated server
+- Compatible with ACE
 - Compatible with Zeus Enhanced
 - Editor modules to simplify usage (*Mod version only!*)
 
