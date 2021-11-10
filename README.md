@@ -1,6 +1,14 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 10/11/2021
+Applied changes from script version: 
+- Updated ZEN functions to be consistent with other TTS scripts.
+- When ACE is enabled the cloak actions will now use ACE actions instead.
+
+Mod version specific changes:
+- Redid support for TTS Effects AIO. 
+
 ### 07/11/2021
 - Fixed default settings for modules having incorrect types. Modules should not cause errors when using default settings anymore.
 

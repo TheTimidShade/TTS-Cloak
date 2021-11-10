@@ -34,7 +34,7 @@ class CfgVehicles {
 		displayName = "$STR_tts_cloak_moduleChangeSettings_title_alt";
 		icon = "tts_cloak\icons\tts_settings.paa";
 		category = "tts_cloak_modules";
-		function = "tts_cloak_fnc_editor_moduleCloakSettings";
+		function = "tts_cloak_fnc_moduleCloakSettings";
 		functionPriority = 1;
 		
 		class Attributes : AttributesBase {
@@ -112,7 +112,7 @@ class CfgVehicles {
 		displayName = "Give Cloak (OLD)";
 		icon = "tts_cloak\icons\cloak_man.paa";
 		category = "tts_cloak_modules";
-		function = "tts_cloak_fnc_editor_moduleGiveCloak";
+		function = "tts_cloak_fnc_moduleGiveCloak";
 		functionPriority = 2;
 		
 		class Attributes : AttributesBase {
@@ -156,7 +156,7 @@ class CfgVehicles {
 		displayName = "$STR_tts_cloak_moduleGiveCloak_title";
 		icon = "tts_cloak\icons\cloak_man.paa";
 		category = "tts_cloak_modules";
-		function = "tts_cloak_fnc_editor_moduleGiveCloakV2";
+		function = "tts_cloak_fnc_moduleGiveCloakV2";
 		functionPriority = 2;
 		
 		class Attributes : AttributesBase {
@@ -192,7 +192,7 @@ class CfgVehicles {
 		displayName = "$STR_tts_cloak_moduleGiveVehicleCloak_title";
 		category = "tts_cloak_modules";
 		icon = "tts_cloak\icons\cloak_vehicle.paa";
-		function = "tts_cloak_fnc_editor_moduleGiveVehicleCloak";
+		function = "tts_cloak_fnc_moduleGiveVehicleCloak";
 		functionPriority = 2;
 		
 		class Attributes : AttributesBase {
