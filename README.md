@@ -137,7 +137,7 @@ if (vehicleVarName player in _cloakPlayers) then {
     [player, 30, 60] spawn tts_cloak_fnc_giveCloak;
 };
 ```
-*NOTE:* I don't recommend giving/removing a vehicle's active camouflage ability mid-mission. It seems to cause some strange behaviour, but the option is still available if you need to.
+*NOTE:* I don't recommend giving/removing a vehicle's active camouflage ability mid-mission since it interferes with Zeus/Spectator. The option is still available if you need to.
 
 Give active camo to vehicle:
 ```sqf
