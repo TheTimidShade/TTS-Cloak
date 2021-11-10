@@ -196,6 +196,10 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
+### 10/11/2021
+- Updated ZEN functions to be consistent with other TTS scripts.
+- When ACE is enabled the cloak actions will now use ACE actions instead.
+
 ### 13/10/2021
 - Added stringtable support to allow the script to be translated. If you are willing to help translate the script into another language, contact me in my Discord!
 - Added 2 new functions, `fn_addCloakActions` and `fn_addVehicleCloakActions`. These are executed locally on players to allow localisation of the action text.

@@ -3,7 +3,8 @@ class tts_cloak
 	class cloak
 	{
 		file = "scripts\tts_cloak\functions";
-		class initCloak {postInit = 1;};
+		class init { postInit = 1; };
+		class initCloak {};
 		class hasCloak {};
 		class startCloak {};
 		class cloakParticles {};
@@ -12,7 +13,6 @@ class tts_cloak
 		class giveCloak {};
 		class removeCloak {};
 		class cloakAI {};
-		class customZeusModules {preInit = 1;};
 		class giveVehicleCloak {};
 		class startVehicleCloak {};
 		class setupPIPcamera {};
@@ -21,12 +21,13 @@ class tts_cloak
 		class addCloakActions {};
 		class addVehicleCloakActions {};
 	};
-	class modules {
-		file = "scripts\tts_cloak\functions\modules";
-		class module_changeSettings {};
-		class module_giveCloak {};
-		class module_removeCloak {};
-		class module_cloakUnit {};
-		class module_giveVehicleCloak {};
+	class zen {
+		file = "scripts\tts_cloak\functions\zen";
+		class initCustomModules {};
+		class zen_moduleChangeSettings {};
+		class zen_moduleGiveCloak {};
+		class zen_moduleRemoveCloak {};
+		class zen_moduleCloakUnit {};
+		class zen_moduleGiveVehicleCloak {};
 	};
 };
