@@ -7,7 +7,7 @@ You can see the script in action in this [demo video](https://www.youtube.com/wa
 
 This is the script version, a [mod version](https://steamcommunity.com/sharedfiles/filedetails/?id=2544778197) is also available on the Steam Workshop.
 
-### **FEATURES:**
+### **Features:**
 - Configurable settings so you can use the script how you like
 - Display to keep track of cloak status
 - Cloak activation/deactivation sounds
