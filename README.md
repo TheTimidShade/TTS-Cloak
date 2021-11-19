@@ -49,7 +49,7 @@ This script is licensed under [Arma Public License No Derivatives (APL-ND)](http
 If you'd like to translate the mod into a different language, contact me via my Discord or create a pull request.
 
 ### **Credits:**
-- Players of the Task Force Dingo[taskforcedingo.com] community who helped bulk test the script during a weekly mission night.
+- Players of the [Task Force Dingo](taskforcedingo.com) community who helped bulk test the script during a weekly mission night.
 - Twiznak, for providing the code necessary for the vehicle active camo functionality. You should check out his [workshop items](https://steamcommunity.com/profiles/76561198009924789/myworkshopfiles/).
 - Majestic Iranian Kebab, for providing the code tweaks necessary for collision to work.
 
