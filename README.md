@@ -1,7 +1,11 @@
-# TTS Cloak Script
-Cloak script for Arma 3, allows player and AI units to use a Predator/Crysis style cloaking device that distorts the world behind them. Also includes a vehicle active camo ability thanks to Twiznak.
+# TTS Cloak
+This is a cloaking script I made for another mission maker. This script replicates a Crysis/Predator style cloaking device where the area around/behind the unit is distorted by the cloak so they are still slightly visible. Player units can be granted the cloak and will be able to activate it through the action menu (ACE self interaction if using ACE) if they are wearing the required equipment. AI units cannot cloak themselves but can be cloaked using functions provided on the GitHub or via Zeus Enhanced modules. Cloaked units cannot be damaged by bullets due to the collision being disabled when the player model is hidden but will still take damage from most other damage sources.
 
-A [mod version](https://steamcommunity.com/sharedfiles/filedetails/?id=2544778197) is also available on the Steam Workshop.
+This also contains an 'Active Camouflage' script made by Twiznak which allows certain vehicles to have their hidden selection textures changed to a PIP texture generated based on the surrounding terrain. Currently this is only aesthetic and does nothing to hide the vehicle from AI.
+
+You can see the script in action in this [demo video](https://www.youtube.com/watch?v=Hasma9EI7sM) or if you'd like to test the script for yourself, you can try out the [demo mission](https://steamcommunity.com/sharedfiles/filedetails/?id=2388444766).
+
+This is the script version, a [mod version](https://steamcommunity.com/sharedfiles/filedetails/?id=2544778197) is also available on the Steam Workshop.
 
 ### **FEATURES:**
 - Configurable settings so you can use the script how you like
@@ -12,114 +16,46 @@ A [mod version](https://steamcommunity.com/sharedfiles/filedetails/?id=254477819
 - Vehicle active camouflage (Thanks to Twiznak)
 - Designed for multiplayer and tested on dedicated server
 - Compatible with ACE
-- Compatible with Zeus Enhanced
+- Useable from Zeus via [Zeus Enhanced](https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631)
 - Editor modules to simplify usage (*Mod version only!*)
 
-[Zeus Enhanced](https://steamcommunity.com/sharedfiles/filedetails/?id=1779063631) is required to use the module from Zeus.
+**ZEN Modules**:
+- Change Settings
+- Cloak Unit(s)
+- Give Cloak
+- Give Active Camo
+- Remove Cloak
 
-You can see the script in action in this [demo video](https://www.youtube.com/watch?v=Hasma9EI7sM) or try out the [demo mission](https://steamcommunity.com/sharedfiles/filedetails/?id=2388444766) yourself.
+**Editor Modules (MOD VERSION ONLY):**
+- Cloak Settings
+- Give Cloak
+- Give Active Camo
 
-___
-
-### **INTALLATION INSTRUCTIONS:**
-1. Download the script files via the green 'Code' button in the top right. Extract the ZIP file somewhere easily accessible.
-2. Open your mission folder. You can do this from the 3den Editor using (Scenario > Open Scenario Folder).
-3. Copy the 'scripts' folder into your mission folder.
-4. If you do not already have an `init.sqf` file in your mission, copy it into your mission folder. If you already have one, copy the contents of my `init.sqf` into yours.
-5. If you do not already have a `description.ext` file in your mission, copy it into your mission folder. If you already have one, copy the contents of my `description.ext` into yours. Any 'CfgSomething' classes need to be merged together into one.
-e.g.
-```cpp
-// from TTS Cloak
-class CfgFunctions
-{
-    #include "scripts\tts_cloak\cfgFunctions.hpp"
-}
-```
-and
-```cpp
-// from TTS Beam Laser
-class CfgFunctions
-{
-    #include "scripts\tts_beam\cfgFunctions.hpp"
-}
-```
-should become
-```cpp
-// what CfgFunctions should look like when using both
-class CfgFunctions
-{
-    #include "scripts\tts_cloak\cfgFunctions.hpp"
-    #include "scripts\tts_beam\cfgFunctions.hpp"
-}
-```
-6. If you do not already have a `stringtable.xml` file in your mission, copy it into your mission folder. If you already have one, copy everything EXCEPT THE FIRST LINE from my `stringtable.xml` into yours.
-7. Set up the settings in your `init.sqf` file how you would like (more info on individual settings below)
-8. Done! You can now grant a player unit the ability to cloak using 
-```sqf
-[unit, maxDuration, cooldown] spawn tts_cloak_fnc_giveCloak;
-```
-Vehicles can be given active camouflage using
-```sqf
-[vehicle, "uniqueString", maxDuration, cooldown] spawn tts_cloak_fnc_giveVehicleCloak;
-```
-Alternatively, if you are using Zeus Enhanced you can do this via Zeus modules.
-
-*IMPORTANT*: `tts_cloak_fnc_giveCloak` should be executed on the machine of the player the cloak is being given to and `tts_cloak_fnc_giveVehicleCloak` should only be executed on the server. If you don't know how to do this, see below for some examples you can copy paste!
+**For help with troubleshooting, questions or feedback, join my [Discord](https://discord.gg/8Y2ENWQMpK)**
 
 ___
 
-### **SETTINGS:**
-Default settings:
-```sqf
-tts_cloak_uniforms = ["U_O_CombatUniform_oucamo"];
-tts_cloak_headgear = ["H_HelmetLeaderO_oucamo"];
-tts_cloak_requireHolstered = true;
-tts_cloak_decloakOnFired = true;
-tts_cloak_playSounds = true;
-tts_cloak_playVoice = true;
-tts_cloak_useUI = true;
-tts_cloak_useUIVehicle = true;
-```
-**tts_cloak_uniforms/tts_cloak_headgear**  
-An array of uniform/headgear classnames. In order to cloak, a player unit must be wearing one of the uniforms/headgear in the array AND been granted the ability to cloak via `tts_cloak_fnc_giveCloak`. If the array contains the empty string (""), that piece of equipment is not required.  
-e.g.
-```sqf
-// Defaults (CSAT uniform/helmet)
-tts_cloak_uniforms = ["U_O_CombatUniform_oucamo"];
-tts_cloak_headgear = ["H_HelmetLeaderO_oucamo"];
-```
-```sqf
-// Don't require helmet
-tts_cloak_uniforms = ["U_O_CombatUniform_oucamo"];
-tts_cloak_headgear = [""];
-```
-```sqf
-// Don't require uniform
-tts_cloak_uniforms = [""];
-tts_cloak_headgear = ["H_HelmetLeaderO_oucamo"];
-```
+### **More information:**
+- [Script version install instructions](https://github.com/TheTimidShade/Timid-Cloak/wiki/Script-version-install-instructions)
+- [Available settings](https://github.com/TheTimidShade/Timid-Cloak/wiki/Available-settings)
+- [Function documentation](https://github.com/TheTimidShade/Timid-Cloak/wiki/Function-documentation)
 
-**tts_cloak_requireHolstered**  
-If this is true, the player must have all weapons holstered to activate the cloak so activating the 'Activate Cloak' action will holster the player's weapon. False means the player can have an active weapon while cloaked. Default value is true.
+### **License:**
+This script is licensed under [Arma Public License No Derivatives (APL-ND)](https://www.bohemia.net/community/licenses/arma-public-license-nd). You can freely use the script in your missions, private or uploaded to the Steam Workshop but you must not use any parts of the script in another mod without my permission.
 
-**tts_cloak_decloakOnFired**  
-If this is true, the player will have their cloak deactivated when they fire their weapon or throw grenades. Default value is true.
+### **Supported Languages:**  
+- English
 
-**tts_cloak_playSounds**  
-If this is true, cloak sounds will be played when cloaking, uncloaking and cloak overheating (same as uncloaking but cloak duration runs out). Default value is true.
+If you'd like to translate the mod into a different language, contact me via my Discord or create a pull request.
 
-**tts_cloak_playVoice**  
-If this is true, the 'Cloak Activated' voice sound effect will play when activating the cloak. Default value is true.
-
-**tts_cloak_useUI**  
-If this is true, an action will be available that shows/hides a small display in the bottom left corner which shows the cloak status and remaining duration or remaining cooldown. Default value is true.
-
-**tts_cloak_useUIVehicle**  
-If this is true, an action will be available that shows/hides a small display in the bottom left corner which shows the active camo status and remaining duration or remaining cooldown of the current vehicle. The action is only shown when in a vehicle that has active camouflage ability granted via `tts_cloak_fnc_giveVehicleCloak`. Default value is true.
+### **Credits:**
+- Players of the Task Force Dingo[taskforcedingo.com] community who helped bulk test the script during a weekly mission night.
+- Twiznak, for providing the code necessary for the vehicle active camo functionality. You should check out his [workshop items](https://steamcommunity.com/profiles/76561198009924789/myworkshopfiles/).
+- Majestic Iranian Kebab, for providing the code tweaks necessary for collision to work.
 
 ___
 
-### **EXAMPLES:**  
+### **Examples:**  
 *NOTE:* If using these examples in a trigger, the trigger must NOT be server only!  
 Give cloak to all players:
 ```sqf
@@ -144,52 +80,6 @@ Give active camo to vehicle:
 // put in init.sqf or trigger 'On Activation' box
 // gives 'cloakVic' 2 minutes of active camouflage with a 5 minute cooldown
 [cloakVic, "cloakVic", 120, 300] spawn tts_cloak_fnc_giveVehicleCloak;
-```
-___
-
-### **OTHER FUNCTIONS:**  
-*NOTE:* Be careful when using these functions, incorrect use may cause strange behaviour! These are used internally by the scripts/modules but you can use them yourself if you want to.
-
-**tts_cloak_fnc_cloakAI**  
-Despite the name this can be used to manually cloak a player or AI unit for a certain duration. If used on a player that has cloak ability, they will be able to disable it before the duration is over. This is used by the 'Cloak Unit' ZEN module.
-```
-Parameters:  
-  0: OBJECT - Unit to cloak  
-  1: NUMBER (OPTIONAL) - Duration to cloak unit for in seconds. Default: 30s
-Returns:  
-  Nothing
-```
-Example:
-```sqf
-// remoteExec used to execute where '_unit' is local
-[_unit, 30] remoteExec ["tts_cloak_fnc_cloakAI", _unit, false];
-```
-
-<br/>**tts_cloak_fnc_hasCloak**  
-Tests if the given unit has the required equipment to cloak based on the `tts_cloak_uniforms` and `tts_cloak_headgear` arrays defined in `init.sqf`.
-```
-Parameters:  
-  0: OBJECT - Unit to check for cloak equipment
-Returns:  
-  BOOL - True if unit has proper equipment, false if not
-```
-Example:
-```sqf
-private _canCloak = [_unit] call tts_cloak_fnc_hasCloak;
-```
-
-<br/>**tts_cloak_fnc_removeCloak**  
-Removes cloak/active camouflage ability from the given unit/vehicle. If used on a unit cloaked via `tts_cloak_fnc_cloakAI` it will uncloak the unit.
-```
-Parameters:  
-  0: OBJECT - Unit/vehicle to remove cloak/active camo from
-Returns:  
-  Nothing
-```
-Example:
-```sqf
-// remoteExec used to execute where '_unit' is local
-[_unit] remoteExec ["tts_cloak_fnc_removeCloak", _unit, false];
 ```
 
 ___
