@@ -46,7 +46,7 @@ This script is licensed under [Arma Public License No Derivatives (APL-ND)](http
 ### **Supported Languages:**  
 - English
 
-If you'd like to translate the mod into a different language, contact me via my Discord or create a pull request.
+If you'd like to translate the script into a different language, contact me via my Discord or create a pull request.
 
 ### **Credits:**
 - Players of the [Task Force Dingo](taskforcedingo.com) community who helped bulk test the script during a weekly mission night.
