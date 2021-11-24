@@ -36,9 +36,9 @@ This is the script version, a [mod version](https://steamcommunity.com/sharedfil
 ___
 
 ### **More information:**
-- [Script version install instructions](https://github.com/TheTimidShade/Timid-Cloak/wiki/Script-version-install-instructions)
-- [Available settings](https://github.com/TheTimidShade/Timid-Cloak/wiki/Available-settings)
-- [Function documentation](https://github.com/TheTimidShade/Timid-Cloak/wiki/Function-documentation)
+- [Script version install instructions](https://github.com/TheTimidShade/TTS-Cloak/wiki/Script-version-install-instructions)
+- [Available settings](https://github.com/TheTimidShade/TTS-Cloak/wiki/Available-settings)
+- [Function documentation](https://github.com/TheTimidShade/TTS-Cloak/wiki/Function-documentation)
 
 ### **License:**
 This script is licensed under [Arma Public License No Derivatives (APL-ND)](https://www.bohemia.net/community/licenses/arma-public-license-nd). You can freely use the script in your missions, private or uploaded to the Steam Workshop but you must not use any parts of the script in another mod without my permission.
