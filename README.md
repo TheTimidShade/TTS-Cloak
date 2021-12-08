@@ -1,6 +1,9 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 08/12/2021
+- Fixed typo in module functions that would cause them to abort when TTS Beam laser is disabled using the TTS Effects AIO mod.
+
 ### 10/11/2021
 Applied changes from script version: 
 - Updated ZEN functions to be consistent with other TTS scripts.

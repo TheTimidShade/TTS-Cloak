@@ -19,7 +19,7 @@ params [
 	["_activated", true, [true]]
 ];
 
-if (!(missionNamespace getVariable ["tts_effects_aio_beam_enabled", true])) exitWith {};
+if (!(missionNamespace getVariable ["tts_effects_aio_cloak_enabled", true])) exitWith {};
 
 if (_activated) then {
 	// get values from module
