@@ -1,6 +1,10 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 12/12/2021
+Applied changes from script version:
+- Fixed duplicate ACE actions being created when respawning.
+
 ### 08/12/2021
 - Fixed typo in module functions that would cause them to abort when TTS Beam laser is disabled using the TTS Effects AIO mod.
 
