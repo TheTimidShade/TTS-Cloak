@@ -87,6 +87,9 @@ ___
 ## Changelog
 Read below for complete changelog history.
 
+### 12/12/2021
+- Fixed duplicate ACE actions being created when respawning.
+
 ### 10/11/2021
 - Updated ZEN functions to be consistent with other TTS scripts.
 - When ACE is enabled the cloak actions will now use ACE actions instead.

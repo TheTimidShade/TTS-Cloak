@@ -70,7 +70,10 @@ if (!(player getVariable ["tts_cloak_hasRespawnEH", false])) then {
 		tts_cloak_cooldown = 0; // reset cooldown
 		[_unit, false] remoteExec ["hideObjectGlobal", 2, false]; // make sure the unit is visible
 		_unit setCaptive false; // make sure unit is not captive
-		player setVariable ["tts_cloak_hasActions", false, true]; // player doesn't have cloak actions anymore
+		
+		// if ace is enabled, the actions are preserved across respawns
+		// if not, set tts_cloak_hasActions to false so the script will recreate them
+		if (!isClass(configFile >> "CfgPatches" >> "ace_main")) then {player setVariable ["tts_cloak_hasActions", false, true]}; 
 
 		// if the player had a cloak before they respawned, re-apply it
 		if (player getVariable ["tts_cloak_duration", -1] != -1 && !(player getVariable ["tts_cloak_cloakDisabled", false])) then {
