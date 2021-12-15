@@ -1,6 +1,9 @@
 ## Changelog
 Read below for complete changelog history.
 
+### 15/12/2021
+- Added Polish translation by honger.
+
 ### 12/12/2021
 Applied changes from script version:
 - Fixed duplicate ACE actions being created when respawning.
