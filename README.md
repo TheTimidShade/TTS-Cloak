@@ -45,6 +45,7 @@ This script is licensed under [Arma Public License No Derivatives (APL-ND)](http
 
 ### **Supported Languages:**  
 - English
+- Polish (Translation by honger)
 
 If you'd like to translate the script into a different language, contact me via my Discord or create a pull request.
 
