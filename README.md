@@ -68,10 +68,11 @@ Give cloak to all players:
 Give cloak to a subset of players:
 ```sqf
 // put in initPlayerLocal.sqf or trigger 'On Activation' box
-// only player slots with variable names 'sf_1', 'sf_2' and 'sf_3' have cloak ability
-private _cloakPlayers = ["sf_1", "sf_2", "sf_3"];
-if (vehicleVarName player in _cloakPlayers) then {
-    [player, 30, 60] spawn tts_cloak_fnc_giveCloak;
+private _maxDuration = 30; // Maximum cloak duration in seconds
+private _cooldown = 5; // Cooldown time in seconds
+private _cloakUnits = ["unit_1", "unit_2", "unit_3"]; // List of unit varnames that have cloaking devices
+if (vehicleVarName player in _cloakUnits) then {
+    [player, _maxDuration, _cooldown] spawn tts_cloak_fnc_giveCloak;
 };
 ```
 *NOTE:* I don't recommend giving/removing a vehicle's active camouflage ability mid-mission since it interferes with Zeus/Spectator. The option is still available if you need to.
