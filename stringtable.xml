@@ -4,16 +4,19 @@
 		<Key ID="STR_tts_cloak_default">
 			<Original>Default</Original>
 			<English>Default</English>
+			<Russian>Default</Russian>
 			<Polish>Domyślne</Polish>
 		</Key>
 		<Key ID="STR_tts_cloak_true">
 			<Original>True</Original>
 			<English>True</English>
+			<Russian>True</Russian>
 			<Polish>Tak</Polish>
 		</Key>
 		<Key ID="STR_tts_cloak_false">
 			<Original>False</Original>
 			<English>False</English>
+			<Russian>False</Russian>
 			<Polish>Nie</Polish>
 		</Key>
 	</Package >
@@ -21,65 +24,77 @@
 		<Key ID="STR_tts_cloak_action_activateCloak">
 			<Original>Activate cloak</Original>
 			<English>Activate cloak</English>
+			<Russian>Активировать Маскировку</Russian>
 			<Polish>Aktywuj Maskowanie</Polish>
 		</Key>
 		<Key ID="STR_tts_cloak_action_deactivateCloak">
 			<Original>Deactivate cloak</Original>
 			<English>Deactivate cloak</English>
+			<Russian>Деактивировать Маскировку</Russian>
 			<Polish>Dezaktywuj Maskowanie</Polish>
 		</Key>
 		<Key ID="STR_tts_cloak_action_toggleCloakDisplay">
 			<Original>Toggle cloak display</Original>
 			<English>Toggle cloak display</English>
+			<Russian>Включить Дисплей</Russian>
 			<Polish>Przełącz wyświetlanie Maskowania</Polish>
 		</Key>
 		<Key ID="STR_tts_cloak_action_activateVehicleCamo">
 			<Original>Activate vehicle camo</Original>
 			<English>Activate vehicle camo</English>
+			<Russian>Активировать Камуфляж ТС</Russian>
 			<Polish>Włącz Aktywny Kamuflaż</Polish>
 		</Key>
 		<Key ID="STR_tts_cloak_action_deactivateVehicleCamo">
 			<Original>Deactivate vehicle camo</Original>
 			<English>Deactivate vehicle camo</English>
+			<Russian>Деактивировать Камуфляж ТС</Russian>
 			<Polish>Wyłącz Aktywny Kamuflaż</Polish>
 		</Key>
 		<Key ID="STR_tts_cloak_action_toggleVehicleCamoDisplay">
 			<Original>Toggle camo display</Original>
 			<English>Toggle camo display</English>
+			<Russian>Включить Дисплей Камуфляжа</Russian>
 			<Polish>Przełącz wyświetlanie Kamuflażu</Polish>
 		</Key>
 	</Package >
 	<Package name="Modules">
-		<Container name="Change settings module">	
+		<Container name="Change settings module">
 			<Key ID="STR_tts_cloak_moduleChangeSettings_title">
 				<Original>Change Settings</Original>
 				<English>Change Settings</English>
+				<Russian>Поменять Настройки</Russian>
 				<Polish>Zmień ustawienia</Polish>
 			</Key>
 			<Key ID="STR_tts_cloak_moduleChangeSettings_title_alt">
 				<Original>Cloak Settings</Original>
 				<English>Cloak Settings</English>
+				<Russian>Настройки Маскировки</Russian>
 				<Polish>Ustawienia Maskowania</Polish>
 			</Key>
 			<Key ID="STR_tts_cloak_moduleChangeSettings_desc">
 				<Original>Configures settings for TTS Cloak script.</Original>
 				<English>Configures settings for TTS Cloak script.</English>
+				<Russian>Настроить параметры TTS Маскировки.</Russian>
 				<Polish>Pozwala na konfigurację ustawień modyfikacji TTS Cloack (Maskowania).</Polish>
 			</Key>
 			<Key ID="STR_tts_cloak_moduleChangeSettings_heading">
 				<Original>Configure Cloak Settings</Original>
 				<English>Configure Cloak Settings</English>
+				<Russian>Конфигурация Настроек Маскировки</Russian>
 				<Polish>Skonfiguruj Maskowanie</Polish>
 			</Key>
 			<Container name="Cloak uniforms param">
 				<Key ID="STR_tts_cloak_moduleChangeSettings_uniform">
 					<Original>Cloak uniforms</Original>
 					<English>Cloak uniforms</English>
+					<Russian>Униформа для Маскировки</Russian>
 					<Polish>Uniformy maskujące</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleChangeSettings_uniform_desc">
 					<Original>Uniforms considered 'cloaking' uniforms seperated by commas</Original>
 					<English>Uniforms considered 'cloaking' uniforms seperated by commas</English>
+					<Russian>Униформы должны записываться через запятую</Russian>
 					<Polish>Uniformy pozwalające na uruchamianie Maskowania. Klasy należy oddzielić przecinkami.</Polish>
 				</Key>
 			</Container>
@@ -87,11 +102,13 @@
 				<Key ID="STR_tts_cloak_moduleChangeSettings_headgear">
 					<Original>Cloak headgear</Original>
 					<English>Cloak headgear</English>
+					<Russian>Маскировочный шлем</Russian>
 					<Polish>Hełmy maskujące</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleChangeSettings_headgear_desc">
 					<Original>Headgear considered 'cloaking' headgear seperated by commas</Original>
 					<English>Headgear considered 'cloaking' headgear seperated by commas</English>
+					<Russian>Головные уборы должны записываться через запятую</Russian>
 					<Polish>Hełmy pozwalające na uruchamianie Maskowania. Klasy należy oddzielić przecinkami.</Polish>
 				</Key>
 			</Container>
@@ -99,11 +116,13 @@
 				<Key ID="STR_tts_cloak_moduleChangeSettings_requireHolstered">
 					<Original>Require holstered</Original>
 					<English>Require holstered</English>
+					<Russian>Требует убрать оружие?</Russian>
 					<Polish>Wymagaj schowania broni</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleChangeSettings_requireHolstered_desc">
 					<Original>Does the player need to put their gun away to cloak?</Original>
 					<English>Does the player need to put their gun away to cloak?</English>
+					<Russian>Нужно ли игроку убрать оружие чтобы включить маскировку?</Russian>
 					<Polish>Wymusza na graczu schowanie broni, by skorzystać z Maskowania.</Polish>
 				</Key>
 			</Container>
@@ -111,11 +130,13 @@
 				<Key ID="STR_tts_cloak_moduleChangeSettings_decloakOnFire">
 					<Original>Uncloak when firing</Original>
 					<English>Uncloak when firing</English>
+					<Russian>Отключение маскировки после выстрела</Russian>
 					<Polish>Wyłącz maskowanie podczas strzelania</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleChangeSettings_decloakOnFire_desc">
 					<Original>Does the cloak automatically shut down when a weapon is used?</Original>
 					<English>Does the cloak automatically shut down when a weapon is used?</English>
+					<Russian>Должна ли маскировка выключиться автоматически после использования оружия?</Russian>
 					<Polish>Wyłącza system maskowania gdy gracz korzysta z broni.</Polish>
 				</Key>
 			</Container>
@@ -123,11 +144,13 @@
 				<Key ID="STR_tts_cloak_moduleChangeSettings_playSounds">
 					<Original>Play sounds</Original>
 					<English>Play sounds</English>
+					<Russian>Включить звук</Russian>
 					<Polish>Odtwarzaj dźwięki</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleChangeSettings_playSounds_desc">
 					<Original>Should cloak in/out sound effects be used?</Original>
 					<English>Should cloak in/out sound effects be used?</English>
+					<Russian>Должен ли модуль издавать звуковые эффекты во время использования?</Russian>
 					<Polish>Podczas korzystania z Maskowania będą odtwarzane efekty dźwiękowe</Polish>
 				</Key>
 			</Container>
@@ -135,11 +158,13 @@
 				<Key ID="STR_tts_cloak_moduleChangeSettings_playVoice">
 					<Original>Play voice</Original>
 					<English>Play voice</English>
+					<Russian>Включить голос</Russian>
 					<Polish>Odtwarzaj głosy</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleChangeSettings_playVoice_desc">
 					<Original>Should 'cloak engaged' voice play on entering cloak?</Original>
 					<English>Should 'cloak engaged' voice play on entering cloak?</English>
+					<Russian>Должен ли проигрываться голос "Cloak Engaged" после активации маскировки?</Russian>
 					<Polish>Podczas włączania Maskowania odtworzy się zdanie "Cloak engaged"</Polish>
 				</Key>
 			</Container>
@@ -147,11 +172,13 @@
 				<Key ID="STR_tts_cloak_moduleChangeSettings_useUI">
 					<Original>Use UI</Original>
 					<English>Use UI</English>
+					<Russian>Использовать UI</Russian>
 					<Polish>Pokaż UI</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleChangeSettings_useUI_desc">
 					<Original>Should the cloak UI be available to players?</Original>
 					<English>Should the cloak UI be available to players?</English>
+					<Russian>Должен ли маскированчный UI доступен игрокам?</Russian>
 					<Polish>Wyświetli graczom interfejs Maskowania</Polish>
 				</Key>
 			</Container>
@@ -159,36 +186,42 @@
 				<Key ID="STR_tts_cloak_moduleChangeSettings_useVehicleUI">
 					<Original>Use vehicle UI</Original>
 					<English>Use vehicle UI</English>
+					<Russian>Использовать UI транспорта</Russian>
 					<Polish>Pokaż UI pojazdu</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleChangeSettings_useVehicleUI_desc">
 					<Original>Should the active camo UI be available to players?</Original>
 					<English>Should the active camo UI be available to players?</English>
+					<Russian>Должен ли доступен игрокам UI камуфляжа техники?</Russian>
 					<Polish>Interfejs aktywnego kamuflażu będzie dostępny dla graczy</Polish>
 				</Key>
 			</Container>
-			
+
 		</Container>
-		<Container name="Cloak units module">	
+		<Container name="Cloak units module">
 			<Key ID="STR_tts_cloak_moduleCloakUnits_title">
 				<Original>Cloak Unit(s)</Original>
 				<English>Cloak Unit(s)</English>
+				<Russian>Замаскировать Юнита</Russian>
 				<Polish>Maskowanie jednostek</Polish>
 			</Key>
 			<Key ID="STR_tts_cloak_moduleCloakUnits_placeOnUnit">
 				<Original>Must be placed on a unit!</Original>
 				<English>Must be placed on a unit!</English>
+				<Russian>Должен быть размещен на юните!</Russian>
 				<Polish>Musi być postawione na jednostce!</Polish>
 			</Key>
 			<Container name="Cloak duration param">
 				<Key ID="STR_tts_cloak_moduleCloakUnits_duration">
 					<Original>Cloak duration</Original>
 					<English>Cloak duration</English>
+					<Russian>Продолжительность Маскировки</Russian>
 					<Polish>Czas trwania</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleCloakUnits_duration_desc">
 					<Original>Duration in seconds unit(s) will be cloaked</Original>
 					<English>Duration in seconds unit(s) will be cloaked</English>
+					<Russian>Продолжительность в секундах, в течение которой юнит будет скрыт</Russian>
 					<Polish>Czas trwania efektu Maskowania w sekundach</Polish>
 				</Key>
 			</Container>
@@ -196,40 +229,47 @@
 				<Key ID="STR_tts_cloak_moduleCloakUnits_applyToGroup">
 					<Original>Apply to group</Original>
 					<English>Apply to group</English>
+					<Russian>Применить для группы</Russian>
 					<Polish>Zastosuj dla grupy</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleCloakUnits_applyToGroup_desc">
 					<Original>If checked, all members in the unit's group will be cloaked</Original>
 					<English>If checked, all members in the unit's group will be cloaked</English>
+					<Russian>Если применено, все члены группы будут скрыты</Russian>
 					<Polish>Jeśli zaznaczone, wszystkie jednostki w grupie będą zamaskowane</Polish>
 				</Key>
 			</Container>
 		</Container>
-		<Container name="Give cloak module">	
+		<Container name="Give cloak module">
 			<Key ID="STR_tts_cloak_moduleGiveCloak_title">
 				<Original>Give Cloak</Original>
 				<English>Give Cloak</English>
+				<Russian>Дать Маскировку</Russian>
 				<Polish>Nałóż Maskowanie</Polish>
 			</Key>
 			<Key ID="STR_tts_cloak_moduleGiveCloak_desc">
 				<Original>Gives synced player units the ability to cloak.</Original>
 				<English>Gives synced player units the ability to cloak.</English>
+				<Russian>Дает синхронизированным игрокам способность маскировки.</Russian>
 				<Polish>Daje zsynchronizowym graczom możliwość korzystania z Maskowania</Polish>
 			</Key>
 			<Key ID="STR_tts_cloak_moduleGiveCloak_placeOnPlayer">
 				<Original>Must be placed on a player!</Original>
 				<English>Must be placed on a player!</English>
+				<Russian>Должен быть размещен на игрока!</Russian>
 				<Polish>Musi być postawione na graczu!</Polish>
 			</Key>
 			<Container name="Cloak max duration param">
 				<Key ID="STR_tts_cloak_moduleGiveCloak_maxDuration">
 					<Original>Cloak max duration</Original>
 					<English>Cloak max duration</English>
+					<Russian>Максимальная продолжительность маскировки</Russian>
 					<Polish>Maks. czas Maskowania</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleGiveCloak_maxDuration_desc">
 					<Original>Maximum time unit can be cloaked before being forced to uncloak</Original>
 					<English>Maximum time unit can be cloaked before being forced to uncloak</English>
+					<Russian>Максимальное значение, в течение которого юнит может находиться в маскировке, прежде чем она снимется принудительно</Russian>
 					<Polish>Maksymalny czas działania Maskowania, zanim jednostka go wyłączy</Polish>
 				</Key>
 			</Container>
@@ -237,45 +277,53 @@
 				<Key ID="STR_tts_cloak_moduleGiveCloak_cooldown">
 					<Original>Cloak cooldown</Original>
 					<English>Cloak cooldown</English>
+					<Russian>Откат маскировки</Russian>
 					<Polish>Odnawianie Maskowania</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleGiveCloak_cooldown_desc">
 					<Original>Cooldown period required after uncloak before unit can cloak again</Original>
 					<English>Cooldown period required after uncloak before unit can cloak again</English>
+					<Russian>Требуется откат маскировки, прежде чем юнит сможет снова активировать маскировку</Russian>
 					<Polish>Czas odnawiania Maskowania, po którym jednostka może z niego ponownie skorzystać</Polish>
 				</Key>
 			</Container>
 		</Container>
-		<Container name="Give active camouflage module">	
+		<Container name="Give active camouflage module">
 			<Key ID="STR_tts_cloak_moduleGiveVehicleCloak_title">
 				<Original>Give Active Camouflage</Original>
 				<English>Give Active Camouflage</English>
+				<Russian>Дать Активные Камуфляж</Russian>
 				<Polish>Nadaj Aktywny Kamuflaż</Polish>
 			</Key>
 			<Key ID="STR_tts_cloak_moduleGiveVehicleCloak_desc">
 				<Original>Gives synced vehicle the ability to use active camouflage. Only one vehicle can be synced to a single module.</Original>
 				<English>Gives synced vehicle the ability to use active camouflage. Only one vehicle can be synced to a single module.</English>
+				<Russian>Дает синхронизированной технике возможность активировать камуфляж. Только одна техника может быть синхронизированна с одним модулем.</Russian>
 				<Polish>Nadaje zsynchronizowanemu pojazdowi możliwość korzystania z Aktywnego Kamuflażu. Do jednego modułu można przypisać jeden pojazd.</Polish>
 			</Key>
 			<Key ID="STR_tts_cloak_moduleGiveVehicleCloak_placeOnVehicle">
 				<Original>Must be placed on a vehicle!</Original>
 				<English>Must be placed on a vehicle!</English>
+				<Russian>Должен быть размещен на технике!</Russian>
 				<Polish>Musi być postawione na pojeździe!</Polish>
 			</Key>
 			<Container name="Unique identifier param">
 				<Key ID="STR_tts_cloak_moduleGiveVehicleCloak_identifier">
 					<Original>Unique identifier</Original>
 					<English>Unique identifier</English>
+					<Russian>Уникальный идентификатор</Russian>
 					<Polish>Identyfikator</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleGiveVehicleCloak_identifier_desc">
 					<Original>Unique identifier used by script to handle PIP textures</Original>
 					<English>Unique identifier used by script to handle PIP textures</English>
+					<Russian>Уникальный идентификатор используется скриптом для обработки текстур PIP(Картинка в Картинке)</Russian>
 					<Polish>Unikalny identyfikator wykorzystywany przez skrypt do zarządzania teksturami PIP</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleGiveVehicleCloak_identifier_warning">
 					<Original>Identifier must be unique, non-empty string!</Original>
 					<English>Identifier must be unique, non-empty string!</English>
+					<Russian>Идентификатор должен быть заполненным!</Russian>
 					<Polish>Identyfikator musi być unikalną, niepustą wartością!</Polish>
 				</Key>
 			</Container>
@@ -283,11 +331,13 @@
 				<Key ID="STR_tts_cloak_moduleGiveVehicleCloak_maxDuration">
 					<Original>Camo max duration</Original>
 					<English>Camo max duration</English>
+					<Russian>Максимальная продолжитьность камуфляжа техники</Russian>
 					<Polish>Czas trwania Kamuflażu</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleGiveVehicleCloak_maxDuration_desc">
 					<Original>Maximum time vehicle can use active camo before automatic deactivation</Original>
 					<English>Maximum time vehicle can use active camo before automatic deactivation</English>
+					<Russian>Максимальное значение, в течении которого техника может находиться в камуфляже перед автоматическим отключением</Russian>
 					<Polish>Maksymalny czas trwania Aktywnego Kamuflażu dla pojazdu przed automatycznym wyłączeniem</Polish>
 				</Key>
 			</Container>
@@ -295,24 +345,28 @@
 				<Key ID="STR_tts_cloak_moduleGiveVehicleCloak_cooldown">
 					<Original>Camo cooldown</Original>
 					<English>Camo cooldown</English>
+					<Russian>Откат Камуфляжа</Russian>
 					<Polish>Odnawianie Kamuflażu</Polish>
 				</Key>
 				<Key ID="STR_tts_cloak_moduleGiveVehicleCloak_cooldown_desc">
 					<Original>Cooldown period required after vehicle deactivates camouflage before it can be used again</Original>
 					<English>Cooldown period required after vehicle deactivates camouflage before it can be used again</English>
+					<Russian>Требуется откат камуфляжа, прежде чем техника сможет снова активировать камуфляж</Russian>
 					<Polish>Czas po deaktywacji Kamuflażu, wymagany do jego ponownego uruchomienia</Polish>
 				</Key>
 			</Container>
 		</Container>
-		<Container name="Remove cloak module">	
+		<Container name="Remove cloak module">
 			<Key ID="STR_tts_cloak_moduleRemoveCloak_title">
 				<Original>Remove Cloak</Original>
 				<English>Remove Cloak</English>
+				Т<Russian>Убрать Маскировку</Russian>
 				<Polish>Usuń Maskowanie</Polish>
 			</Key>
 			<Key ID="STR_tts_cloak_moduleRemoveCloak_placeOnCorrect">
 				<Original>Must be placed on a unit or vehicle!</Original>
 				<English>Must be placed on a unit or vehicle!</English>
+				<Russian>Должен быть размещен на юните или технике!</Russian>
 				<Polish>Musi być postawione na jednostce lub pojeździe!</Polish>
 			</Key>
 		</Container>
