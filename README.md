@@ -41,7 +41,7 @@ ___
 - [Function documentation](https://github.com/TheTimidShade/TTS-Cloak/wiki/Function-documentation)
 
 ### **License:**
-This script is licensed under [Arma Public License No Derivatives (APL-ND)](https://www.bohemia.net/community/licenses/arma-public-license-nd). You can freely use the script in your missions, private or uploaded to the Steam Workshop but you must not use any parts of the script in another mod without my permission.
+This script is licensed under [Arma Public License Share Alike (APL-SA)](https://www.bohemia.net/community/licenses/arma-public-license-share-alike).
 
 ### **Supported Languages:**  
 - English
